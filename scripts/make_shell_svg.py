@@ -14,7 +14,7 @@ OUTPUT = ROOT / "structural-shell.svg"
 def generate_shell_svg(animated: bool = True) -> str:
     # Build clean SMIL-based SVG
     svg = f"""<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="410" height="490" viewBox="0 0 410 490" role="img" aria-label="Parametric Shell &amp; Finite Element Mesh">
+<svg xmlns="http://www.w3.org/2000/svg" width="410" height="354" viewBox="0 0 410 354" role="img" aria-label="Parametric Shell &amp; Finite Element Mesh">
   <title>Parametric Funicular Vault &amp; FEA Mesh Motif (Illustrative)</title>
   <defs>
     <linearGradient id="panelBg" x1="0" y1="0" x2="1" y2="1">
@@ -45,8 +45,8 @@ def generate_shell_svg(animated: bool = True) -> str:
   </defs>
 
   <!-- Panel Frame -->
-  <rect width="410" height="490" rx="12" fill="url(#panelBg)" stroke="#1e293b" stroke-width="1.2"/>
-  <rect width="410" height="490" rx="12" fill="url(#diagGrid)"/>
+  <rect width="410" height="354" rx="12" fill="url(#panelBg)" stroke="#1e293b" stroke-width="1.2"/>
+  <rect width="410" height="354" rx="12" fill="url(#diagGrid)"/>
 
   <!-- Title bar -->
   <path d="M 1 12 Q 1 1 12 1 L 398 1 Q 409 1 409 12 L 409 38 L 1 38 Z" fill="url(#topbarGrad)"/>
@@ -54,7 +54,7 @@ def generate_shell_svg(animated: bool = True) -> str:
   <text x="20" y="24" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600">Parametric shell geometry (illustrative)</text>
 
   <!-- 3D Isometric Computational Shell Mesh -->
-  <g transform="translate(205, 235)" filter="url(#meshGlow)">
+  <g transform="translate(205, 138) scale(0.9)" filter="url(#meshGlow)">
     <!-- Base Boundary Supports -->
     <path d="M -160,70 L 0,145 L 160,70 L 0,-10 Z" fill="none" stroke="#1e3a5f" stroke-dasharray="4,4" stroke-width="1.2"/>
 
@@ -84,7 +84,7 @@ def generate_shell_svg(animated: bool = True) -> str:
   </g>
 
   <!-- Spec & Dimension Callouts -->
-  <g transform="translate(24, 385)">
+  <g transform="translate(24, 292)">
     <text x="0" y="0" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="9.5" letter-spacing="0.05em">ILLUSTRATIVE COLOUR SCALE</text>
     <rect x="0" y="8" width="362" height="6" rx="2" fill="url(#stressMap)"/>
     <text x="0" y="27" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="9">Low</text>
@@ -92,21 +92,6 @@ def generate_shell_svg(animated: bool = True) -> str:
     <text x="340" y="27" fill="#a5f3fc" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="9">High</text>
   </g>
 
-  <!-- Structural Metadata Matrix -->
-  <g transform="translate(24, 438)">
-    <line x1="0" y1="0" x2="362" y2="0" stroke="#1e293b" stroke-width="1"/>
-    <text x="0" y="16" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="9.5">SOLVER</text>
-    <text x="56" y="16" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="9.5">CalculiX + OpenSeesPy</text>
-
-    <text x="210" y="16" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="9.5">MESH</text>
-    <text x="262" y="16" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="9.5">Gmsh Quad-Shell (S8R)</text>
-
-    <text x="0" y="32" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="9.5">SEISMIC</text>
-    <text x="56" y="32" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="9.5">GB 50011 / EC8 (0.05-0.40g)</text>
-
-    <text x="210" y="32" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="9.5">CARBON</text>
-    <text x="262" y="32" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="9.5">Low-carbon focus</text>
-  </g>
 </svg>"""
     return svg
 

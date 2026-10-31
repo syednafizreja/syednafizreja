@@ -18,9 +18,7 @@ PROFILE = ROOT / "data" / "profile.json"
 SITE = ROOT / "data" / "site.json"
 README = ROOT / "README.md"
 
-SELF = "S. N. R. Hasib"
 MANUSCRIPT_LABELS = {"under_review": "Under review", "in_prep": "In preparation", "accepted": "Accepted"}
-MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
 
 
 def load_profile() -> dict:
@@ -32,13 +30,6 @@ def month_index(value: str | None, today: date) -> int:
         return today.year * 12 + today.month - 1
     year, month = value.split("-")
     return int(year) * 12 + int(month) - 1
-
-
-def month_label(value: str | None) -> str:
-    if value is None:
-        return "Present"
-    year, month = value.split("-")
-    return f"{MONTHS[int(month) - 1]} {year}"
 
 
 def plural(n: int, word: str) -> str:
@@ -99,96 +90,29 @@ def block_badges(p: dict, d: dict) -> str:
         badge("ResearchGate", who["name"], "00CCBB", "researchgate", links["researchgate"]),
         badge("LinkedIn", links["linkedin"].rstrip("/").rsplit("/", 1)[1], "0a66c2", None, links["linkedin"]),
         badge("Email", links["email"], "0284c7", "gmail", f"mailto:{links['email']}"),
-        badge("Location", who["location"], "475569", "googlemaps"),
-        badge("Status", who["status"], "0284c7", None, links["site"]),
     ])
-
-
-def project_tagline(project: dict) -> str:
-    bits = [project["role"], project["stack"]]
-    if project.get("license"):
-        bits.append(project["license"])
-    return " · ".join(bits)
 
 
 def block_projects(p: dict, d: dict) -> str:
     out = []
     for project in p["projects"]:
-        out.append(f"#### [`{project['title']}`]({project['url']})")
-        out.append(f"*{project_tagline(project)}*")
-        out.extend(f"* {bullet}" for bullet in project["bullets"])
-        if project.get("status"):
-            when = date.fromisoformat(project["as_of"])
-            out.append(f"* **Status ({when.day} {MONTHS[when.month - 1]} {when.year}):** {project['status']}")
-        if project.get("live"):
-            out.append(f"* **Live demo:** [{project['live'].split('//')[1].rstrip('/')}]({project['live']})")
-        if project.get("extra"):
-            out.append(f"* **Related:** [{project['extra']['label']}]({project['extra']['url']})")
-        out.append("")
-    return "\n".join(out).rstrip()
+        live = f" · [Live demo]({project['live']})" if project.get("live") else ""
+        out.append(f"* [**{project['name']}**]({project['url']}): {project['summary']}{live}")
+    return "\n".join(out)
 
 
 def block_publications(p: dict, d: dict) -> str:
-    out = []
-    for i, paper in enumerate(p["publications"], start=1):
-        authors = paper["authors"].replace(SELF, f"**{SELF}**")
-        out.append(f"{i}. **{paper['title']}**  ")
-        out.append(f"   {authors}  ")
-        out.append(f"   *{paper['journal']}*, {paper['issue']}, {paper['year']}.  ")
-        out.append(f"   `doi:` [{paper['doi']}](https://doi.org/{paper['doi']})")
-        out.append("")
-    return "\n".join(out).rstrip()
-
-
-def block_manuscripts(p: dict, d: dict) -> str:
-    out = []
-    for item in p["manuscripts"]:
-        state = MANUSCRIPT_LABELS[item["status"]]
-        if item.get("venue"):
-            state = f"{state}, {item['venue']}"
-        note = f" ({item['note']})" if item.get("note") else ""
-        out.append(f"* **{item['title']}**  ")
-        out.append(f"  **{SELF}** (Sole Author). *{state}*{note}.")
-    return "\n".join(out)
-
-
-def block_reports(p: dict, d: dict) -> str:
-    out = []
-    for item in p["reports"]:
-        note = f" ({item['note']})" if item.get("note") else ""
-        out.append(f"* **{item['title']}**{note}  ")
-        out.append(f"  `doi:` [{item['doi']}](https://doi.org/{item['doi']})")
-    return "\n".join(out)
-
-
-def block_timeline(p: dict, d: dict) -> str:
-    today = date.today()
-    out = []
-    for item in p["timeline"]:
-        span = f"{month_label(item['start'])} – {month_label(item['end'])}"
-        if item["kind"] == "industry":
-            span = f"{span}, {d['tenure_short']}"
-        out.append(f"* **{item['org']}** · {item['location']} ({span})  ")
-        lines = item["lines"]
-        out.extend(f"  {line}  " for line in lines[:-1])
-        out.append(f"  {lines[-1]}")
-    return "\n".join(out)
-
-
-def block_tenure(p: dict, d: dict) -> str:
-    return d["tenure_long"]
+    return "\n".join(
+        f"{i}. [{paper['title']}](https://doi.org/{paper['doi']}), *{paper['journal']}*, {paper['year']}"
+        for i, paper in enumerate(p["publications"], start=1)
+    )
 
 
 BLOCKS = {
     "badges": block_badges,
     "projects": block_projects,
     "publications": block_publications,
-    "manuscripts": block_manuscripts,
-    "reports": block_reports,
-    "timeline": block_timeline,
-    "tenure": block_tenure,
 }
-INLINE = {"tenure"}
 
 
 def render_readme(text: str, profile: dict, derived: dict) -> str:
@@ -197,9 +121,8 @@ def render_readme(text: str, profile: dict, derived: dict) -> str:
         pattern = re.compile(re.escape(open_tag) + ".*?" + re.escape(close_tag), re.DOTALL)
         if not pattern.search(text):
             raise ValueError(f"README.md has no {open_tag} block")
-        sep = "" if name in INLINE else "\n"
         body = render(profile, derived)
-        text = pattern.sub(lambda _: f"{open_tag}{sep}{body}{sep}{close_tag}", text)
+        text = pattern.sub(lambda _: f"{open_tag}\n{body}\n{close_tag}", text)
     return text
 
 
@@ -209,7 +132,7 @@ def main() -> int:
     readme = render_readme(README.read_text(encoding="utf-8"), profile, derived)
     with open(README, "w", encoding="utf-8", newline="\n") as f:
         f.write(readme)
-    site = {**profile, "derived": derived}
+    site = {**{k: profile[k] for k in ("identity", "links", "projects", "publications", "timeline")}, "derived": derived}
     with open(SITE, "w", encoding="utf-8", newline="\n") as f:
         json.dump(site, f, ensure_ascii=False, indent=1)
         f.write("\n")

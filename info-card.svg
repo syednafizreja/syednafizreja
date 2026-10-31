@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="510" height="490" viewBox="0 0 510 490" role="img" aria-label="Research profile of Syed Nafiz Reja Hasib">
+<svg xmlns="http://www.w3.org/2000/svg" width="510" height="354" viewBox="0 0 510 354" role="img" aria-label="Research profile of Syed Nafiz Reja Hasib">
 <title>Syed Nafiz Reja Hasib — Structural Engineering Researcher Profile</title>
 <defs>
 <linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1">
@@ -11,52 +11,36 @@
   <stop offset="100%" stop-color="#16273d"/>
 </linearGradient>
 </defs>
-<rect width="510" height="490" rx="12" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
+<rect width="510" height="354" rx="12" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
 <path d="M 1 12 Q 1 1 12 1 L 498 1 Q 509 1 509 12 L 509 44 L 1 44 Z" fill="url(#headerGrad)"/>
 <line x1="1" y1="44" x2="509" y2="44" stroke="#1e293b" stroke-width="1"/>
 <text x="24" y="27" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">Syed Nafiz Reja Hasib</text>
 <g transform="translate(24, 72)">
 <text x="0" y="0" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">ROLE</text>
 <text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">Civil Engineer · Computational Structural Designer</text>
-<text x="110" y="15" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400">Low-Carbon Concrete Shells &amp; Seismic Resilience</text>
 </g>
-<g transform="translate(24, 116)">
-<text x="0" y="0" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">STACK</text>
-<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">Python (NumPy, SciPy, pytest) · OpenSeesPy · CalculiX</text>
-<text x="110" y="15" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400">Gmsh · AutoCAD · Revit/BIM · JavaScript · Git/CI</text>
+<g transform="translate(24, 108)">
+<text x="0" y="0" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">FOCUS</text>
+<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">Low-carbon concrete shells · Seismic design</text>
 </g>
-<g transform="translate(24, 160)">
+<g transform="translate(24, 144)">
 <text x="0" y="0" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">PROJECTS</text>
-<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">ShellBench (floor carbon in seismic RC frames)</text>
-<text x="110" y="15" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400">ShellForm (earthquake cost of form-found shells)</text>
+<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">ShellBench · ShellForm</text>
 </g>
-<g transform="translate(24, 204)">
-<text x="0" y="0" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">RESEARCH</text>
-<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">Form-Finding (FDM) · Seismic GB 50011 / EC8</text>
-<text x="110" y="15" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400">Embodied Carbon (GB/T 51366, ICE) · ML Surrogates</text>
-</g>
-<g transform="translate(24, 248)">
+<g transform="translate(24, 180)">
 <text x="0" y="0" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">EDUCATION</text>
-<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">B.Eng. Civil Engineering (84.05/100, GPA 3.41/5.0)</text>
-<text x="110" y="15" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400">Southwest Petroleum University · Chinese Govt Scholarship</text>
+<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">B.Eng. Civil Engineering · Southwest Petroleum University</text>
 </g>
-<g transform="translate(24, 292)">
+<g transform="translate(24, 216)">
 <text x="0" y="0" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">INDUSTRY</text>
-<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">2 yr 10 mo Project Engineer (Precision Mfg, Micro-CNC)</text>
-<text x="110" y="15" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400">Automated QC · Fatigue Testing · Root-Cause Analysis</text>
+<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">2 yr 10 mo · Project Engineer, Denco Medical</text>
 </g>
-<g transform="translate(24, 336)">
+<g transform="translate(24, 252)">
 <text x="0" y="0" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">PUBLICATIONS</text>
-<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">3 Peer-Reviewed Papers (Edge AI/IoT, Nano-WMA, BIM)</text>
-<text x="110" y="15" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400">1 Under Review · 3 In Prep · 2 Technical Reports</text>
+<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">3 papers · 1 under review · 3 in preparation</text>
 </g>
-<g transform="translate(24, 380)">
-<text x="0" y="0" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">METHODS</text>
-<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">Pre-registered plans · Hand-checked models · Open science</text>
-<text x="110" y="15" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400">Automated testing · Versioned releases · Reproducible workflows</text>
-</g>
-<g transform="translate(24, 424)">
-<text x="0" y="0" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">ORCID</text>
-<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">0009-0002-7162-7890 · Guangdong, China</text>
+<g transform="translate(24, 288)">
+<text x="0" y="0" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">LOCATION</text>
+<text x="110" y="0" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">Guangdong, China</text>
 </g>
 </svg>

@@ -18,59 +18,24 @@
   "projects": [
     {
       "name": "ShellBench",
-      "title": "ShellBench: Whole-Building Embodied Carbon of Thin-Shell Floors",
       "url": "https://github.com/syednafizreja/ShellBench",
-      "role": "Lead Researcher & Developer",
-      "stack": "Python, OpenSeesPy, CalculiX, Gmsh",
-      "license": "Open-Source (MIT)",
-      "status": "Week 1 complete. Anchor model built and checked, shell floor work started, first release v0.0.1.",
-      "as_of": "2026-10-31",
-      "bullets": [
-        "**Research Problem:** How significantly do funicular concrete shell floors reduce A1-A3 embodied carbon in code-designed RC frame structures across 3–8 storeys when strict diaphragm action, perimeter ties, and seismic chord demands are enforced?",
-        "**Validation Baseline:** Audited my hand-calculated thesis frame building and turned its results into automated verification targets.",
-        "**Verification Pipeline:** Automated suite of 132 continuous integration tests checking internal moments, shear distributions, and lateral drift limits under gravity, wind, and response-spectrum seismic excitation.",
-        "**Planned:** Pre-registered parametric sweep over ground accelerations (0.05-0.40 g), a Zenodo DOI from v0.1, and machine-learning surrogate models."
-      ]
+      "summary": "Measures how much funicular shell floors reduce embodied carbon in seismic RC frame buildings."
     },
     {
       "name": "ShellForm",
-      "title": "ShellForm: Seismic Resilience vs. Carbon Cost in Form-Found Shells",
       "url": "https://github.com/syednafizreja/Shellform",
-      "role": "Lead Researcher & Developer",
-      "stack": "Python, CalculiX, Three.js",
-      "status": "Pre-registration approved 30 Oct 2026. One shell analysed in CalculiX (static, modal, buckling), 31 tests, both form-finding strategies implemented and tested.",
-      "as_of": "2026-10-31",
-      "bullets": [
-        "**Research Problem:** Measures the direct embodied-carbon consequence of making form-found shell geometries earthquake-resistant, extending the seismic form-finding methods of Michiels & Adriaenssens (2017–2018) with standardized carbon accounting (GB/T 51366 and ICE inventory).",
-        "**Computational Scope:** Parametric matrix of 168 sized shells defined across support topologies, rise-to-span ratios, and ground acceleration ranges (0-0.6 g). Runs are planned.",
-        "**Deliverables:** Open-access interactive Three.js design space explorer, in development."
-      ]
+      "summary": "Measures the embodied-carbon cost of making form-found concrete shells earthquake-resistant."
     },
     {
       "name": "Canopy",
-      "title": "Parametric Aviation-Terminal Canopy Optimization",
       "url": "https://github.com/syednafizreja/parametric-canopy-carbon-optimization",
       "live": "https://syednafizreja.github.io/parametric-canopy-carbon-optimization/",
-      "role": "Independent Computational Design Prototype",
-      "stack": "JavaScript, Python, WebGL",
-      "bullets": [
-        "Live web prototype linking canopy curvature to real-time structural proxy metrics and A1-A3 embodied carbon estimates. A simplified, screening-level research demo."
-      ]
+      "summary": "Live web prototype linking canopy curvature to structural and embodied-carbon estimates."
     },
     {
       "name": "Nano-WMA",
-      "title": "Nano-Modified Warm-Mix Asphalt: Durability & Life-Cycle Assessment",
       "url": "https://github.com/syednafizreja/nano-wma-lca-model",
-      "extra": {
-        "label": "FE + LCA pavement model",
-        "url": "https://github.com/syednafizreja/nano-wma-pavement-carbon"
-      },
-      "role": "Sole Researcher",
-      "stack": "Python, Finite Element Modeling, LCA",
-      "bullets": [
-        "Built an object-oriented Python engine linking empirical moisture-damage laboratory metrics (Tensile Strength Ratio) with climate-driven weathering models.",
-        "Comparative cradle-to-gate LCA found a 5.2% production GWP decrease (61.31 to 58.15 kg CO2e/t). With a 15% service-life extension, annualized lifecycle GWP falls by **17.5%**."
-      ]
+      "summary": "Life-cycle assessment linking nano-modified asphalt durability to carbon emissions."
     }
   ],
   "publications": [
@@ -103,18 +68,15 @@
     {
       "title": "A climate-driven moisture-damage model for nano-modified warm mix asphalt with BIM-ready outputs",
       "status": "under_review",
-      "venue": "Discover Civil Engineering",
-      "note": "Submitted Oct 2026"
+      "venue": "Discover Civil Engineering"
     },
     {
       "title": "Coupled finite-element and life-cycle assessment of nano-silica warm mix asphalt pavements",
-      "status": "in_prep",
-      "note": "Planned submission Nov 2026"
+      "status": "in_prep"
     },
     {
       "title": "Whole-building embodied carbon of thin-shell floors in seismic RC frames (ShellBench, Paper 1)",
-      "status": "in_prep",
-      "note": "Planned submission Nov 2026"
+      "status": "in_prep"
     },
     {
       "title": "The carbon cost of seismic resilience: gravity-only versus seismic-aware form-finding of concrete shells (ShellForm)",
@@ -124,7 +86,6 @@
   "reports": [
     {
       "title": "Lateral-Load Analysis and Capacity Design of a 4-Storey RC Frame Under GB 50011-2010: Fully Documented Case Study from Panzhihua, Sichuan",
-      "note": "Complete thesis drawings & calculations",
       "doi": "10.13140/RG.2.2.26247.15522"
     },
     {
@@ -140,9 +101,7 @@
       "start": "2019-09",
       "end": "2023-06",
       "lines": [
-        "*B.Eng. in Civil Engineering* · Weighted Average: **84.05/100** (GPA 3.41/5.0)",
-        "*Awarded full Chinese Government Scholarship (CSC)*",
-        "*Thesis:* Structural design of a four-storey RC frame building in Panzhihua, Sichuan (Seismic Intensity 7, 0.10 g). Grade: **87/100**."
+        "*B.Eng. in Civil Engineering*"
       ]
     },
     {
@@ -152,8 +111,7 @@
       "start": "2024-01",
       "end": "2026-10",
       "lines": [
-        "*Project Engineer — Precision Manufacturing & Quality Engineering*",
-        "Managed automated lines, dimensional micro-tolerances, alloy heat-treatment fatigue evaluation, and CAPA resolution pipelines."
+        "*Project Engineer, Precision Manufacturing & Quality Engineering*"
       ]
     },
     {
@@ -168,14 +126,54 @@
     }
   ],
   "card": [
-    {"label": "ROLE", "accent": "#38bdf8", "lines": ["Civil Engineer · Computational Structural Designer", "Low-Carbon Concrete Shells & Seismic Resilience"]},
-    {"label": "STACK", "accent": "#7dd3fc", "lines": ["Python (NumPy, SciPy, pytest) · OpenSeesPy · CalculiX", "Gmsh · AutoCAD · Revit/BIM · JavaScript · Git/CI"]},
-    {"label": "PROJECTS", "accent": "#38bdf8", "lines": ["ShellBench (floor carbon in seismic RC frames)", "ShellForm (earthquake cost of form-found shells)"]},
-    {"label": "RESEARCH", "accent": "#94a3b8", "lines": ["Form-Finding (FDM) · Seismic GB 50011 / EC8", "Embodied Carbon (GB/T 51366, ICE) · ML Surrogates"]},
-    {"label": "EDUCATION", "accent": "#38bdf8", "lines": ["B.Eng. Civil Engineering (84.05/100, GPA 3.41/5.0)", "Southwest Petroleum University · Chinese Govt Scholarship"]},
-    {"label": "INDUSTRY", "accent": "#94a3b8", "lines": ["{tenure_short} Project Engineer (Precision Mfg, Micro-CNC)", "Automated QC · Fatigue Testing · Root-Cause Analysis"]},
-    {"label": "PUBLICATIONS", "accent": "#7dd3fc", "lines": ["{peer_reviewed} Peer-Reviewed Papers (Edge AI/IoT, Nano-WMA, BIM)", "{under_review} Under Review · {in_prep} In Prep · {reports} Technical Reports"]},
-    {"label": "METHODS", "accent": "#38bdf8", "lines": ["Pre-registered plans · Hand-checked models · Open science", "Automated testing · Versioned releases · Reproducible workflows"]},
-    {"label": "ORCID", "accent": "#94a3b8", "lines": ["{orcid_id} · {location}"]}
+    {
+      "label": "ROLE",
+      "accent": "#38bdf8",
+      "lines": [
+        "Civil Engineer · Computational Structural Designer"
+      ]
+    },
+    {
+      "label": "FOCUS",
+      "accent": "#7dd3fc",
+      "lines": [
+        "Low-carbon concrete shells · Seismic design"
+      ]
+    },
+    {
+      "label": "PROJECTS",
+      "accent": "#38bdf8",
+      "lines": [
+        "ShellBench · ShellForm"
+      ]
+    },
+    {
+      "label": "EDUCATION",
+      "accent": "#38bdf8",
+      "lines": [
+        "B.Eng. Civil Engineering · Southwest Petroleum University"
+      ]
+    },
+    {
+      "label": "INDUSTRY",
+      "accent": "#94a3b8",
+      "lines": [
+        "{tenure_short} · Project Engineer, Denco Medical"
+      ]
+    },
+    {
+      "label": "PUBLICATIONS",
+      "accent": "#7dd3fc",
+      "lines": [
+        "{peer_reviewed} papers · {under_review} under review · {in_prep} in preparation"
+      ]
+    },
+    {
+      "label": "LOCATION",
+      "accent": "#94a3b8",
+      "lines": [
+        "{location}"
+      ]
+    }
   ]
 }

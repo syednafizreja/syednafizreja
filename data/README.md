@@ -1,15 +1,19 @@
 # Updating the profile
 
-Edit `profile.json` on GitHub and commit. The "Update Profile Art & Timeline" workflow then rebuilds the README, the info card and the landing page data, so nothing else needs touching.
+Edit `profile.json` and commit. The workflow rebuilds the README, the info card and the landing page data.
 
-| To change | Edit in `profile.json` |
-| :--- | :--- |
-| New paper | Add to `publications` (the count updates itself) |
-| Manuscript moves on | Change its `status`: `in_prep`, `under_review` or `accepted`. Once published, move it to `publications` |
+This file is public. Keep private details out of it.
+
+| Change | Edit |
+| --- | --- |
+| New paper | Add to `publications` |
+| Manuscript moves on | Update its `status` (`in_prep`, `under_review`, `accepted`). Once published, move it to `publications` |
 | New report | Add to `reports` |
-| Project progress | Update that project's `status` and `as_of` date, and any numbers in `bullets` |
-| New job, or job still running | Add to `timeline`. Set `"end": null` for a current role; tenure then counts up on its own |
+| Project | Add or edit in `projects`: `name`, `url`, `summary`, optional `live` |
+| New job, or job still running | Add to `timeline`. Set `"end": null` while it is running |
 | Availability, location, links | `identity` and `links` |
 | Info card text | `card`. Keep lines under about 60 characters. `{peer_reviewed}`, `{under_review}`, `{in_prep}`, `{reports}`, `{tenure_short}`, `{orcid_id}` and `{location}` fill in automatically |
 
-`contributions.json` and `site.json` are generated. Do not edit them. README text outside the `<!-- AUTO:x -->` markers is hand-written and safe to edit directly.
+`manuscripts` and `reports` feed the counts only and are not displayed.
+
+`contributions.json` and `site.json` are generated. README text outside the AUTO markers is hand-written.
