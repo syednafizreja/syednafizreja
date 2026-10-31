@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -50,5 +52,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/contributions.json data/site.json README.md contrib-heatmap.svg structural-shell.svg info-card.svg
           git commit -m "chore(art): refresh heatmap and vector structural assets [skip ci]" || echo "No changes to commit"
-          git pull --rebase origin main
+          git pull --rebase -X theirs origin main
           git push origin main
