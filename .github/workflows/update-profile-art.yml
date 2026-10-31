@@ -41,10 +41,14 @@ jobs:
           python scripts/make_shell_svg.py
           python scripts/make_info_card.py
 
+      - name: Rebuild README and site data from profile.json
+        run: python scripts/build_profile.py
+
       - name: Commit and push if art updated
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/contributions.json contrib-heatmap.svg structural-shell.svg info-card.svg
+          git add data/contributions.json data/site.json README.md contrib-heatmap.svg structural-shell.svg info-card.svg
           git commit -m "chore(art): refresh heatmap and vector structural assets [skip ci]" || echo "No changes to commit"
+          git pull --rebase origin main
           git push origin main

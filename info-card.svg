@@ -52,20 +52,20 @@
 <g transform="translate(24, 292)" opacity="0">
 <animateTransform attributeName="transform" type="translate" from="15,0" to="0,0" dur="0.35s" begin="0.75s" fill="freeze"/><animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.75s" fill="freeze"/>
 <text x="0" y="0" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700" letter-spacing="0.08em">INDUSTRY</text>
-<text x="110" y="0" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="600">2.5 yrs Project Engineer (Precision Mfg, Micro-CNC)</text>
+<text x="110" y="0" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="600">2 yr 10 mo Project Engineer (Precision Mfg, Micro-CNC)</text>
 <text x="110" y="15" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="400">Automated QC · Fatigue Testing · Root-Cause Analysis</text>
 </g>
 <g transform="translate(24, 336)" opacity="0">
 <animateTransform attributeName="transform" type="translate" from="15,0" to="0,0" dur="0.35s" begin="0.87s" fill="freeze"/><animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.87s" fill="freeze"/>
 <text x="0" y="0" fill="#7dd3fc" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700" letter-spacing="0.08em">PUBLICATIONS</text>
 <text x="110" y="0" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="600">3 Peer-Reviewed Papers (Edge AI/IoT, Nano-WMA, BIM)</text>
-<text x="110" y="15" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="400">3 Under Review / Prep · 3 Technical Reports (RG)</text>
+<text x="110" y="15" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="400">1 Under Review · 3 In Prep · 2 Technical Reports</text>
 </g>
 <g transform="translate(24, 380)" opacity="0">
 <animateTransform attributeName="transform" type="translate" from="15,0" to="0,0" dur="0.35s" begin="0.99s" fill="freeze"/><animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.99s" fill="freeze"/>
 <text x="0" y="0" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700" letter-spacing="0.08em">VALUES</text>
-<text x="110" y="0" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="600">Pre-registered plans · Benchmarked solvers · Open science</text>
-<text x="110" y="15" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="400">Automated CI testing · Zenodo DOIs · Zero black boxes</text>
+<text x="110" y="0" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="600">Pre-registered plans · Hand-checked models · Open science</text>
+<text x="110" y="15" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="400">Automated CI testing · Versioned releases · Zero black boxes</text>
 </g>
 <g transform="translate(24, 424)" opacity="0">
 <animateTransform attributeName="transform" type="translate" from="15,0" to="0,0" dur="0.35s" begin="1.11s" fill="freeze"/><animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.11s" fill="freeze"/>

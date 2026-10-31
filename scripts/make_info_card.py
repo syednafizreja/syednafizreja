@@ -5,29 +5,27 @@ Tuned with structural blue-steel / FEA cyan highlights and authoritative academi
 """
 from __future__ import annotations
 
-import os
+import sys
 from pathlib import Path
 from xml.sax.saxutils import escape
+
+sys.path.insert(0, str(Path(__file__).parent))
+from build_profile import card_rows, derive, load_profile
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "info-card.svg"
 
-WIDTH, HEIGHT = 520, 490
-
-ROWS = [
-    ("ROLE", ["Civil Engineer · Computational Structural Designer", "Low-Carbon Concrete Shells & Seismic Resilience"], "#38bdf8", 44),
-    ("STACK", ["Python (NumPy, SciPy, pytest) · OpenSeesPy · CalculiX", "Gmsh · AutoCAD · Revit/BIM · JavaScript · Git/CI"], "#7dd3fc", 44),
-    ("PROJECTS", ["ShellBench (floor carbon in seismic RC frames)", "ShellForm (earthquake cost of form-found shells)"], "#38bdf8", 44),
-    ("RESEARCH", ["Form-Finding (FDM) · Seismic GB 50011 / EC8", "Embodied Carbon (GB/T 51366, ICE) · ML Surrogates"], "#94a3b8", 44),
-    ("EDUCATION", ["B.Eng. Civil Engineering (84.05/100, GPA 3.41/5.0)", "Southwest Petroleum University · Chinese Govt Scholarship"], "#38bdf8", 44),
-    ("INDUSTRY", ["2.5 yrs Project Engineer (Precision Mfg, Micro-CNC)", "Automated QC · Fatigue Testing · Root-Cause Analysis"], "#94a3b8", 44),
-    ("PUBLICATIONS", ["3 Peer-Reviewed Papers (Edge AI/IoT, Nano-WMA, BIM)", "3 Under Review / Prep · 3 Technical Reports (RG)"], "#7dd3fc", 44),
-    ("VALUES", ["Pre-registered plans · Benchmarked solvers · Open science", "Automated CI testing · Zenodo DOIs · Zero black boxes"], "#38bdf8", 44),
-    ("ORCID", ["0009-0002-7162-7890 · Guangdong, China"], "#94a3b8", 36),
-]
+WIDTH = 520
+FIRST_ROW_Y = 72
+BOTTOM_PADDING = 30
 
 
-def make_svg(animated: bool = True) -> str:
+def row_spacing(lines: list[str]) -> int:
+    return 44 if len(lines) > 1 else 36
+
+
+def make_svg(rows: list[dict], animated: bool = True) -> str:
+    HEIGHT = FIRST_ROW_Y + sum(row_spacing(r["lines"]) for r in rows) + BOTTOM_PADDING
     parts = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" role="img" aria-label="Research profile of Syed Nafiz Reja Hasib">',
@@ -54,10 +52,12 @@ def make_svg(animated: bool = True) -> str:
         '<text x="245" y="26" fill="#64748b" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">:: neofetch --profile</text>',
     ]
 
-    y_pos = 72
+    y_pos = FIRST_ROW_Y
     base_delay = 0.15
 
-    for i, (label, lines, accent_col, spacing) in enumerate(ROWS):
+    for i, row in enumerate(rows):
+        label, lines, accent_col = row["label"], row["lines"], row["accent"]
+        spacing = row_spacing(lines)
         anim_frag = ""
         if animated:
             d = base_delay + i * 0.12
@@ -98,13 +98,13 @@ def make_svg(animated: bool = True) -> str:
 
 
 def main() -> int:
-    content = make_svg(animated=True)
-    with open(OUTPUT, "w", encoding="utf-8") as f:
+    profile = load_profile()
+    content = make_svg(card_rows(profile, derive(profile)), animated=True)
+    with open(OUTPUT, "w", encoding="utf-8", newline="\n") as f:
         f.write(content)
     print(f"[ok] Profile info card rendered -> {OUTPUT}")
     return 0
 
 
 if __name__ == "__main__":
-    import sys
     sys.exit(main())
