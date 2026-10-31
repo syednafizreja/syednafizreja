@@ -1,5 +1,0 @@
-# Local-only portrait preparation and SVG preview dependencies.
-Pillow>=10.0
-numpy>=1.26
-opencv-python-headless>=4.8
-rembg[cpu]>=2.0
