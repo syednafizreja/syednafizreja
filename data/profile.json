@@ -175,7 +175,7 @@
     {"label": "EDUCATION", "accent": "#38bdf8", "lines": ["B.Eng. Civil Engineering (84.05/100, GPA 3.41/5.0)", "Southwest Petroleum University · Chinese Govt Scholarship"]},
     {"label": "INDUSTRY", "accent": "#94a3b8", "lines": ["{tenure_short} Project Engineer (Precision Mfg, Micro-CNC)", "Automated QC · Fatigue Testing · Root-Cause Analysis"]},
     {"label": "PUBLICATIONS", "accent": "#7dd3fc", "lines": ["{peer_reviewed} Peer-Reviewed Papers (Edge AI/IoT, Nano-WMA, BIM)", "{under_review} Under Review · {in_prep} In Prep · {reports} Technical Reports"]},
-    {"label": "VALUES", "accent": "#38bdf8", "lines": ["Pre-registered plans · Hand-checked models · Open science", "Automated CI testing · Versioned releases · Zero black boxes"]},
+    {"label": "METHODS", "accent": "#38bdf8", "lines": ["Pre-registered plans · Hand-checked models · Open science", "Automated testing · Versioned releases · Reproducible workflows"]},
     {"label": "ORCID", "accent": "#94a3b8", "lines": ["{orcid_id} · {location}"]}
   ]
 }

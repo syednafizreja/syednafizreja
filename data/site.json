@@ -225,11 +225,11 @@
    ]
   },
   {
-   "label": "VALUES",
+   "label": "METHODS",
    "accent": "#38bdf8",
    "lines": [
     "Pre-registered plans · Hand-checked models · Open science",
-    "Automated CI testing · Versioned releases · Zero black boxes"
+    "Automated testing · Versioned releases · Reproducible workflows"
    ]
   },
   {

@@ -1,21 +1,21 @@
 <div align="center">
 
-<h3><code>nafiz@formfoundry:~/structures$ ./visualize_dispatch.sh --palette=fea-cyan</code></h3>
+<h3>Contribution Activity</h3>
 
-<img src="./contrib-heatmap.svg" width="920" alt="53-Week Continuous Computational Structural Engineering Commit Timeline" />
+<img src="./contrib-heatmap.svg" width="815" alt="GitHub contribution activity over the past 53 weeks" />
 
 <br><br>
 
-<h3><code>nafiz@formfoundry:~/structures$ neofetch --profile=academic</code></h3>
+<h3>Research Overview</h3>
 
 <table border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="420" valign="top" align="center">
-      <img src="./structural-shell.svg" width="410" alt="Parametric Funicular Vault & Finite Element Stress Mesh" />
+      <img src="./structural-shell.svg" width="410" alt="Illustrative parametric shell with finite element mesh" />
     </td>
     <td width="15"></td>
-    <td width="520" valign="top" align="center">
-      <img src="./info-card.svg" width="510" alt="Neofetch Terminal Researcher Profile — Syed Nafiz Reja Hasib" />
+    <td width="510" valign="top" align="center">
+      <img src="./info-card.svg" width="510" alt="Research profile summary for Syed Nafiz Reja Hasib" />
     </td>
   </tr>
 </table>
