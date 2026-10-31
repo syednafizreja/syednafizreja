@@ -125,55 +125,58 @@
       ]
     }
   ],
-  "card": [
-    {
-      "label": "ROLE",
-      "accent": "#38bdf8",
-      "lines": [
-        "Civil Engineer · Computational Structural Designer"
-      ]
-    },
-    {
-      "label": "FOCUS",
-      "accent": "#7dd3fc",
-      "lines": [
-        "Low-carbon concrete shells · Seismic design"
-      ]
-    },
-    {
-      "label": "PROJECTS",
-      "accent": "#38bdf8",
-      "lines": [
-        "ShellBench · ShellForm"
-      ]
-    },
-    {
-      "label": "EDUCATION",
-      "accent": "#38bdf8",
-      "lines": [
-        "B.Eng. Civil Engineering · Southwest Petroleum University"
-      ]
-    },
-    {
-      "label": "INDUSTRY",
-      "accent": "#94a3b8",
-      "lines": [
-        "{tenure_short} · Project Engineer, Denco Medical"
-      ]
-    },
-    {
-      "label": "PUBLICATIONS",
-      "accent": "#7dd3fc",
-      "lines": [
-        "{peer_reviewed} papers · {under_review} under review · {in_prep} in preparation"
-      ]
-    },
-    {
-      "label": "LOCATION",
-      "accent": "#94a3b8",
-      "lines": [
-        "{location}"
-      ]
-    }
-  ]
+  "spine": {
+    "caption": "Material to building",
+    "stages": [
+      {
+        "project": "Nano-WMA",
+        "scale": "Pavement material",
+        "glyph": "layers"
+      },
+      {
+        "project": "Canopy",
+        "scale": "Canopy surface",
+        "glyph": "canopy"
+      },
+      {
+        "project": "ShellForm",
+        "scale": "Concrete shell",
+        "glyph": "shell"
+      },
+      {
+        "project": "ShellBench",
+        "scale": "Whole building",
+        "glyph": "frame"
+      }
+    ],
+    "threads": [
+      {
+        "label": "Carbon accounting",
+        "color": "#34d399",
+        "stages": [
+          "Nano-WMA",
+          "Canopy",
+          "ShellForm",
+          "ShellBench"
+        ]
+      },
+      {
+        "label": "Shell geometry",
+        "color": "#38bdf8",
+        "stages": [
+          "Canopy",
+          "ShellForm",
+          "ShellBench"
+        ]
+      },
+      {
+        "label": "Seismic design",
+        "color": "#fbbf24",
+        "stages": [
+          "ShellForm",
+          "ShellBench"
+        ]
+      }
+    ]
+  }
 }

@@ -62,13 +62,6 @@ def derive(profile: dict, today: date | None = None) -> dict:
     }
 
 
-def card_rows(profile: dict, derived: dict) -> list[dict]:
-    return [
-        {**row, "lines": [line.format_map(derived) for line in row["lines"]]}
-        for row in profile["card"]
-    ]
-
-
 def shield(text: str) -> str:
     return quote(text.replace("-", "--").replace("_", "__").replace(" ", "_"), safe="_-.")
 

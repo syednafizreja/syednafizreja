@@ -15,7 +15,7 @@
     </td>
     <td width="15"></td>
     <td width="510" valign="top" align="center">
-      <img src="./info-card.svg" width="510" alt="Research profile summary for Syed Nafiz Reja Hasib" />
+      <img src="./research-spine.svg" width="510" alt="Research spine linking four projects from pavement material to whole building" />
     </td>
   </tr>
 </table>
