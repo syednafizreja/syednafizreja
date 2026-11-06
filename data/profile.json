@@ -125,6 +125,30 @@
       ]
     }
   ],
+  "hero": {
+    "eyebrow": "Research question",
+    "question": "How much embodied carbon can form-found concrete shells remove from buildings in seismic regions, without giving up safety?",
+    "pillars": [
+      {
+        "label": "Form",
+        "color": "#f59e0b",
+        "text": "Funicular shells that work in pure compression"
+      },
+      {
+        "label": "Safety",
+        "color": "#38bdf8",
+        "text": "Seismic response of shells and RC frames"
+      },
+      {
+        "label": "Carbon",
+        "color": "#34d399",
+        "text": "Embodied carbon from material to building"
+      }
+    ],
+    "title": "Form follows force",
+    "caption": "Hooke's hanging-chain principle",
+    "quote": "As hangs the flexible line, so but inverted will stand the rigid arch."
+  },
   "spine": {
     "caption": "Material to building",
     "stages": [

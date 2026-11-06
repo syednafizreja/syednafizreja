@@ -1,8 +1,6 @@
 <div align="center">
 
-<h3>Contribution Activity</h3>
-
-<img src="./contrib-heatmap.svg" width="815" alt="GitHub contribution activity over the past 53 weeks" />
+<img src="./hero.svg" width="940" alt="Research question: how much embodied carbon can form-found concrete shells remove from buildings in seismic regions, without giving up safety? Animated hanging chain inverting into a compression arch." />
 
 <br><br>
 
