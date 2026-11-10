@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./hero.svg" width="940" alt="Research question: how much embodied carbon can form-found concrete shells remove from buildings in seismic regions, without giving up safety? Animated hanging chain inverting into a compression arch." />
+<img src="./hero.svg" width="940" alt="Research direction: how can computational design and mechanics find structural forms that stay safe in earthquakes and use less material and carbon? Concrete shells are the test case. Animated hanging chain inverting into a compression arch." />
 
 <br><br>
 
@@ -13,7 +13,7 @@
     </td>
     <td width="15"></td>
     <td width="510" valign="top" align="center">
-      <img src="./research-spine.svg" width="510" alt="Research spine linking four projects from pavement material to whole building" />
+      <img src="./research-spine.svg" width="510" alt="Research spine: computational design and mechanics at the core, applied in four projects from pavement material to whole building" />
     </td>
   </tr>
 </table>
@@ -35,8 +35,8 @@
 ### Projects
 
 <!-- AUTO:projects -->
-* [**ShellBench**](https://github.com/syednafizreja/ShellBench): Measures how much funicular shell floors reduce embodied carbon in seismic RC frame buildings.
-* [**ShellForm**](https://github.com/syednafizreja/Shellform): Measures the embodied-carbon cost of making form-found concrete shells earthquake-resistant.
+* [**ShellBench**](https://github.com/syednafizreja/ShellBench): Computational benchmark of funicular shell floors in seismic RC frame buildings: design, seismic checks and embodied carbon.
+* [**ShellForm**](https://github.com/syednafizreja/Shellform): Form-finding and finite-element sizing of concrete shells under gravity and seismic loads, with embodied carbon tracked.
 * [**Canopy**](https://github.com/syednafizreja/parametric-canopy-carbon-optimization): Live web prototype linking canopy curvature to structural and embodied-carbon estimates. · [Live demo](https://syednafizreja.github.io/parametric-canopy-carbon-optimization/)
 * [**Nano-WMA**](https://github.com/syednafizreja/nano-wma-lca-model): Life-cycle assessment linking nano-modified asphalt durability to carbon emissions.
 <!-- /AUTO:projects -->

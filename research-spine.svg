@@ -6,9 +6,9 @@
   <rect x="0.5" y="0.5" width="509" height="353" rx="12" fill="url(#bg)" stroke="#1e293b"/>
   <path d="M 1 12 Q 1 1 12 1 L 498 1 Q 509 1 509 12 L 509 44 L 1 44 Z" fill="url(#head)"/>
   <text x="24" y="27" font-size="14" font-weight="600" fill="#e2e8f0">Research spine</text>
-  <text x="486" y="27" text-anchor="end" font-size="11" fill="#94a3b8">Material to building</text>
-  <path d="M 75 186 L 75 232" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="3 4"/>
-  <path d="M 195 186 L 195 272" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <text x="486" y="27" text-anchor="end" font-size="11" fill="#94a3b8">Core: computational design and mechanics</text>
+  <path d="M 75 186 L 75 312" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <path d="M 195 186 L 195 312" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="3 4"/>
   <path d="M 315 186 L 315 312" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="3 4"/>
   <path d="M 435 186 L 435 312" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="3 4"/>
   <path id="spine" d="M 75 136 L 435 136" stroke="#38bdf8" stroke-width="2"/><circle r="3" fill="#e2e8f0"><animateMotion dur="9s" repeatCount="indefinite" path="M 75 136 L 435 136"/></circle>
@@ -20,16 +20,16 @@
   <circle cx="315" cy="136" r="5" fill="#090f17" stroke="#38bdf8" stroke-width="2"/><text x="315" y="161" text-anchor="middle" font-size="12" font-weight="600" fill="#e2e8f0">ShellForm</text><text x="315" y="176" text-anchor="middle" font-size="10.5" fill="#94a3b8">Concrete shell</text>
   <path d="M 396 62 L 396 114 M 422 62 L 422 114 M 448 62 L 448 114 M 474 62 L 474 114 " stroke="#7dd3fc" stroke-width="1.6"/><path d="M 396 62 Q 409 54 422 62 M 422 62 Q 435 54 448 62 M 448 62 Q 461 54 474 62 M 396 80 Q 409 72 422 80 M 422 80 Q 435 72 448 80 M 448 80 Q 461 72 474 80 M 396 98 Q 409 90 422 98 M 422 98 Q 435 90 448 98 M 448 98 Q 461 90 474 98 " fill="none" stroke="#7dd3fc"/><path d="M 389 114 L 481 114" stroke="#94a3b8"/>
   <circle cx="435" cy="136" r="5" fill="#090f17" stroke="#38bdf8" stroke-width="2"/><text x="435" y="161" text-anchor="middle" font-size="12" font-weight="600" fill="#e2e8f0">ShellBench</text><text x="435" y="176" text-anchor="middle" font-size="10.5" fill="#94a3b8">Whole building</text>
-  <path d="M 75 232 L 435 232" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"/><text x="69" y="221" font-size="11" font-weight="600" fill="#34d399">Carbon accounting</text>
-  <circle cx="75" cy="232" r="4.5" fill="#34d399"/>
-  <circle cx="195" cy="232" r="4.5" fill="#34d399"/>
-  <circle cx="315" cy="232" r="4.5" fill="#34d399"/>
-  <circle cx="435" cy="232" r="4.5" fill="#34d399"/>
-  <path d="M 195 272 L 435 272" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/><text x="189" y="261" font-size="11" font-weight="600" fill="#38bdf8">Shell geometry</text>
-  <circle cx="195" cy="272" r="4.5" fill="#38bdf8"/>
-  <circle cx="315" cy="272" r="4.5" fill="#38bdf8"/>
-  <circle cx="435" cy="272" r="4.5" fill="#38bdf8"/>
-  <path d="M 315 312 L 435 312" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/><text x="309" y="301" font-size="11" font-weight="600" fill="#fbbf24">Seismic design</text>
-  <circle cx="315" cy="312" r="4.5" fill="#fbbf24"/>
-  <circle cx="435" cy="312" r="4.5" fill="#fbbf24"/>
+  <path d="M 315 232 L 435 232" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/><text x="309" y="221" font-size="11" font-weight="600" fill="#38bdf8">Mechanics and FE analysis</text>
+  <circle cx="315" cy="232" r="4.5" fill="#38bdf8"/>
+  <circle cx="435" cy="232" r="4.5" fill="#38bdf8"/>
+  <path d="M 195 272 L 435 272" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/><text x="189" y="261" font-size="11" font-weight="600" fill="#f59e0b">Form-finding and optimisation</text>
+  <circle cx="195" cy="272" r="4.5" fill="#f59e0b"/>
+  <circle cx="315" cy="272" r="4.5" fill="#f59e0b"/>
+  <circle cx="435" cy="272" r="4.5" fill="#f59e0b"/>
+  <path d="M 75 312 L 435 312" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"/><text x="69" y="301" font-size="11" font-weight="600" fill="#34d399">Carbon accounting</text>
+  <circle cx="75" cy="312" r="4.5" fill="#34d399"/>
+  <circle cx="195" cy="312" r="4.5" fill="#34d399"/>
+  <circle cx="315" cy="312" r="4.5" fill="#34d399"/>
+  <circle cx="435" cy="312" r="4.5" fill="#34d399"/>
 </svg>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="940" height="300" viewBox="0 0 940 300" role="img" aria-label="Research question: How much embodied carbon can form-found concrete shells remove from buildings in seismic regions, without giving up safety?" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="300" viewBox="0 0 940 300" role="img" aria-label="Research direction: How can computational design and mechanics find structural forms that stay safe in earthquakes and use less material and carbon?" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#090f17"/><stop offset="1" stop-color="#0d1726"/></linearGradient>
     <linearGradient id="head" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#111f30"/><stop offset="1" stop-color="#16273d"/></linearGradient>
@@ -26,21 +26,23 @@
   <text x="235.0" y="66" text-anchor="middle" font-size="12" font-weight="600" fill="#f59e0b" opacity="1">Hanging chain · pure tension<animate attributeName="opacity" values="1;1;0;0;1" dur="10s" repeatCount="indefinite" keyTimes="0;0.3;0.5;0.8;1" calcMode="spline" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1;0.45 0 0.55 1"/></text>
   <text x="235.0" y="66" text-anchor="middle" font-size="12" font-weight="600" fill="#38bdf8" opacity="0">Inverted arch · pure compression<animate attributeName="opacity" values="0;0;1;1;0" dur="10s" repeatCount="indefinite" keyTimes="0;0.3;0.5;0.8;1" calcMode="spline" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1;0.45 0 0.55 1"/></text>
   <text x="235.0" y="282" text-anchor="middle" font-size="10.5" font-style="italic" fill="#94a3b8">“As hangs the flexible line, so but inverted will stand the rigid arch.”</text>
-  <text x="500" y="80" font-size="11" font-weight="700" letter-spacing="1.6" fill="#38bdf8">RESEARCH QUESTION</text>
-  <text x="500" y="110" font-size="21" font-weight="600" fill="#e2e8f0">How much embodied carbon can</text>
-  <text x="500" y="138" font-size="21" font-weight="600" fill="#e2e8f0">form-found concrete shells remove from</text>
-  <text x="500" y="166" font-size="21" font-weight="600" fill="#e2e8f0">buildings in seismic regions, without</text>
-  <text x="500" y="194" font-size="21" font-weight="600" fill="#e2e8f0">giving up safety?</text>
-  <rect x="500" y="216" width="3" height="48" rx="1.5" fill="#f59e0b"/>
-  <text x="512" y="228" font-size="12.5" font-weight="700" fill="#f59e0b">Form</text>
-  <text x="512" y="245" font-size="10.5" fill="#94a3b8">Funicular shells that</text>
-  <text x="512" y="259" font-size="10.5" fill="#94a3b8">work in pure compression</text>
-  <rect x="642" y="216" width="3" height="48" rx="1.5" fill="#38bdf8"/>
-  <text x="654" y="228" font-size="12.5" font-weight="700" fill="#38bdf8">Safety</text>
-  <text x="654" y="245" font-size="10.5" fill="#94a3b8">Seismic response of</text>
-  <text x="654" y="259" font-size="10.5" fill="#94a3b8">shells and RC frames</text>
+  <text x="500" y="80" font-size="11" font-weight="700" letter-spacing="1.6" fill="#38bdf8">RESEARCH DIRECTION</text>
+  <text x="500" y="110" font-size="21" font-weight="600" fill="#e2e8f0">How can computational design and</text>
+  <text x="500" y="138" font-size="21" font-weight="600" fill="#e2e8f0">mechanics find structural forms that</text>
+  <text x="500" y="166" font-size="21" font-weight="600" fill="#e2e8f0">stay safe in earthquakes and use less</text>
+  <text x="500" y="194" font-size="21" font-weight="600" fill="#e2e8f0">material and carbon?</text>
+  <rect x="500" y="216" width="3" height="62" rx="1.5" fill="#38bdf8"/>
+  <text x="512" y="228" font-size="12.5" font-weight="700" fill="#38bdf8">Mechanics</text>
+  <text x="512" y="245" font-size="10.5" fill="#94a3b8">Finite-element analysis,</text>
+  <text x="512" y="259" font-size="10.5" fill="#94a3b8">buckling and seismic</text>
+  <text x="512" y="273" font-size="10.5" fill="#94a3b8">response</text>
+  <rect x="642" y="216" width="3" height="62" rx="1.5" fill="#f59e0b"/>
+  <text x="654" y="228" font-size="12.5" font-weight="700" fill="#f59e0b">Design</text>
+  <text x="654" y="245" font-size="10.5" fill="#94a3b8">Form-finding,</text>
+  <text x="654" y="259" font-size="10.5" fill="#94a3b8">optimisation and</text>
+  <text x="654" y="273" font-size="10.5" fill="#94a3b8">parametric tools</text>
   <rect x="784" y="216" width="3" height="48" rx="1.5" fill="#34d399"/>
-  <text x="796" y="228" font-size="12.5" font-weight="700" fill="#34d399">Carbon</text>
-  <text x="796" y="245" font-size="10.5" fill="#94a3b8">Embodied carbon from</text>
-  <text x="796" y="259" font-size="10.5" fill="#94a3b8">material to building</text>
+  <text x="796" y="228" font-size="12.5" font-weight="700" fill="#34d399">Test case</text>
+  <text x="796" y="245" font-size="10.5" fill="#94a3b8">Concrete shells, from</text>
+  <text x="796" y="259" font-size="10.5" fill="#94a3b8">roof to whole building</text>
 </svg>

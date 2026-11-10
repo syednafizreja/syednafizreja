@@ -2,8 +2,8 @@
  "identity": {
   "name": "Syed Nafiz Reja Hasib",
   "handle": "syednafizreja",
-  "headline": "Civil Engineer · Computational Structural Designer",
-  "summary": "I design lightweight concrete shell structures that stay safe during seismic excitation while cutting material volume and lifecycle embodied carbon through open, verified computation.",
+  "headline": "Civil Engineer · Computational Design and Mechanics",
+  "summary": "I work on computational design and mechanics of structures: finite-element analysis, form-finding and optimisation, with seismic safety and embodied carbon as design variables. Concrete shells are my current test case.",
   "status": "Open to PhD / MScR Collaborations",
   "location": "Guangdong, China"
  },
@@ -19,12 +19,12 @@
   {
    "name": "ShellBench",
    "url": "https://github.com/syednafizreja/ShellBench",
-   "summary": "Measures how much funicular shell floors reduce embodied carbon in seismic RC frame buildings."
+   "summary": "Computational benchmark of funicular shell floors in seismic RC frame buildings: design, seismic checks and embodied carbon."
   },
   {
    "name": "ShellForm",
    "url": "https://github.com/syednafizreja/Shellform",
-   "summary": "Measures the embodied-carbon cost of making form-found concrete shells earthquake-resistant."
+   "summary": "Form-finding and finite-element sizing of concrete shells under gravity and seismic loads, with embodied carbon tracked."
   },
   {
    "name": "Canopy",
