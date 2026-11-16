@@ -37,7 +37,7 @@
 <!-- AUTO:projects -->
 * [**ShellBench**](https://github.com/syednafizreja/ShellBench): Computational benchmark of funicular shell floors in seismic RC frame buildings: design, seismic checks and embodied carbon.
 * [**ShellForm**](https://github.com/syednafizreja/Shellform): Form-finding and finite-element sizing of concrete shells under gravity and seismic loads, with embodied carbon tracked.
-* [**Canopy**](https://github.com/syednafizreja/parametric-canopy-carbon-optimization): Live web prototype linking canopy curvature to structural and embodied-carbon estimates. · [Live demo](https://syednafizreja.github.io/parametric-canopy-carbon-optimization/)
+* [**ShellLab**](https://github.com/syednafizreja/ShellLab): Force-density form finding for concrete shells in the browser, with support thrust and carbon; solver checked against ShellForm. · [Live demo](https://syednafizreja.github.io/ShellLab/)
 * [**Nano-WMA**](https://github.com/syednafizreja/nano-wma-lca-model): Life-cycle assessment linking nano-modified asphalt durability to carbon emissions.
 <!-- /AUTO:projects -->
 

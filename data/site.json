@@ -27,10 +27,10 @@
    "summary": "Form-finding and finite-element sizing of concrete shells under gravity and seismic loads, with embodied carbon tracked."
   },
   {
-   "name": "Canopy",
-   "url": "https://github.com/syednafizreja/parametric-canopy-carbon-optimization",
-   "live": "https://syednafizreja.github.io/parametric-canopy-carbon-optimization/",
-   "summary": "Live web prototype linking canopy curvature to structural and embodied-carbon estimates."
+   "name": "ShellLab",
+   "url": "https://github.com/syednafizreja/ShellLab",
+   "live": "https://syednafizreja.github.io/ShellLab/",
+   "summary": "Force-density form finding for concrete shells in the browser, with support thrust and carbon; solver checked against ShellForm."
   },
   {
    "name": "Nano-WMA",
