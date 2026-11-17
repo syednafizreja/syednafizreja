@@ -38,6 +38,7 @@
 * [**ShellBench**](https://github.com/syednafizreja/ShellBench): Computational benchmark of funicular shell floors in seismic RC frame buildings: design, seismic checks and embodied carbon.
 * [**ShellForm**](https://github.com/syednafizreja/Shellform): Form-finding and finite-element sizing of concrete shells under gravity and seismic loads, with embodied carbon tracked.
 * [**ShellLab**](https://github.com/syednafizreja/ShellLab): Force-density form finding for concrete shells in the browser, with support thrust and carbon; solver checked against ShellForm. · [Live demo](https://syednafizreja.github.io/ShellLab/)
+* [**Stress-line ribs vs thickness**](https://github.com/syednafizreja/stress-line-ribs-shell-buckling): Buckling of a thin concrete shell at equal concrete: stress-line ribs, a rib grid and a CMA-ES optimised thickness field compared in CalculiX, with IFC4 exports.
 * [**Nano-WMA**](https://github.com/syednafizreja/nano-wma-lca-model): Life-cycle assessment linking nano-modified asphalt durability to carbon emissions.
 <!-- /AUTO:projects -->
 

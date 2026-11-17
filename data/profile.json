@@ -33,6 +33,11 @@
       "summary": "Force-density form finding for concrete shells in the browser, with support thrust and carbon; solver checked against ShellForm."
     },
     {
+      "name": "Stress-line ribs vs thickness",
+      "url": "https://github.com/syednafizreja/stress-line-ribs-shell-buckling",
+      "summary": "Buckling of a thin concrete shell at equal concrete: stress-line ribs, a rib grid and a CMA-ES optimised thickness field compared in CalculiX, with IFC4 exports."
+    },
+    {
       "name": "Nano-WMA",
       "url": "https://github.com/syednafizreja/nano-wma-lca-model",
       "summary": "Life-cycle assessment linking nano-modified asphalt durability to carbon emissions."
