@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 280" role="img" aria-labelledby="st sd">
+  <title id="st">Four studies: alloy, surface, frame, form.</title>
+  <desc id="sd">Residual drift 0.0659 percent to 0.0175 percent. Ribs minus 31.10 percent, thickness plus 25.74 percent. Median carbon minus 5.7 percent. 79 of 84 pairs within 5 percent.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0 H0 V24" fill="none" stroke="#121b2a" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <style>
+    .idx { fill: #5ce1e6; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; letter-spacing: 1px; }
+    .name { fill: #f8fafc; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 600; }
+    .stat { fill: #f8fafc; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 600; }
+    .body { fill: #94a3b8; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
+    .limit { fill: #d6c4a1; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
+    .rail { fill: none; stroke: #1e293b; stroke-width: 2; }
+    .run { fill: none; stroke: #5ce1e6; stroke-width: 2; stroke-linecap: round; }
+    .rule { stroke: #1e293b; stroke-width: 1; }
+    .bead { fill: #f8feff; }
+    @keyframes go {
+      0% { stroke-dashoffset: 1040; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .run { stroke-dasharray: 64 980; animation: go 4.6s linear infinite; }
+  </style>
+  <rect width="1120" height="280" rx="16" fill="#070b14"/>
+  <rect width="1120" height="280" rx="16" fill="url(#grid)"/>
+  <path id="rail" class="rail" d="M40 40 H1080"/>
+  <path class="run" d="M40 40 H1080"/>
+  <path class="rule" d="M28 40 V252 M296 40 V252 M564 40 V252 M832 40 V252 M1092 40 V252"/>
+  <circle class="bead" r="3.4">
+    <animateMotion dur="4.6s" repeatCount="indefinite">
+      <mpath href="#rail"/>
+    </animateMotion>
+  </circle>
+    <text class="idx" x="48" y="86">01</text>
+    <text class="name" x="82" y="86">Alloy</text>
+    <text class="stat" x="48" y="128">0.0659% → 0.0175%</text>
+    <text class="body" x="48" y="160">residual drift</text>
+    <text class="body" x="48" y="182">Peak 1.79% → 3.40%</text>
+    <text class="body" x="48" y="204">+620.9 kgCO2e</text>
+    <text class="limit" x="48" y="236">1D, isothermal</text>
+    <text class="idx" x="316" y="86">02</text>
+    <text class="name" x="350" y="86">Surface</text>
+    <text class="stat" x="316" y="128">−31.10% ribs</text>
+    <text class="body" x="316" y="160">+25.74% thickness</text>
+    <text class="body" x="316" y="182">+15.03% with a dent</text>
+    <text class="body" x="316" y="204">equal volume</text>
+    <text class="limit" x="316" y="236">elastic only</text>
+    <text class="idx" x="584" y="86">03</text>
+    <text class="name" x="618" y="86">Frame</text>
+    <text class="stat" x="584" y="128">−5.7% median</text>
+    <text class="body" x="584" y="160">whole-building A1-A3</text>
+    <text class="body" x="584" y="182">32 of 33 frames</text>
+    <text class="body" x="584" y="204">5,184 designs</text>
+    <text class="limit" x="584" y="236">frame dilutes the floor</text>
+    <text class="idx" x="852" y="86">04</text>
+    <text class="name" x="886" y="86">Form</text>
+    <text class="stat" x="852" y="128">79 / 84 within 5%</text>
+    <text class="body" x="852" y="160">seismic pairs</text>
+    <text class="body" x="852" y="182">ShellForm, ShellLab</text>
+    <text class="body" x="852" y="204">equilibrium to 1e-13 m</text>
+    <text class="limit" x="852" y="236">buckling governs</text>
+  <rect x="0.5" y="0.5" width="1119" height="279" rx="16" fill="none" stroke="#1e293b"/>
+</svg>

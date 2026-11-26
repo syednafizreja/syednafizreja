@@ -1,47 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 360" role="img" aria-labelledby="title desc">
   <title id="title">Syed Nafiz Reja Hasib. Mechanics, verification, and low-carbon design.</title>
-  <desc id="desc">A thin-shell arch and a superelastic flag loop. A dot traces the loop.</desc>
+  <desc id="desc">A perspective shell mesh with a travelling highlight, and a superelastic flag loop with a moving point.</desc>
+  <defs>
+    <radialGradient id="glow" cx="74%" cy="42%" r="36%">
+      <stop offset="0" stop-color="#5ce1e6" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#5ce1e6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0 H0 V24" fill="none" stroke="#132033" stroke-width="1"/>
+    </pattern>
+    <clipPath id="clip"><rect width="1120" height="360" rx="16"/></clipPath>
+  </defs>
   <style>
-    .board { fill: #0b111b; }
-    .edge { fill: none; stroke: #1e293b; stroke-width: 1; }
-    .eye { fill: #5ce1e6; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 1.4px; }
-    .head { fill: #f8fafc; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 600; }
-    .sub { fill: #94a3b8; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
-    .arch { fill: none; stroke: #94a3b8; stroke-width: 1.15; stroke-linejoin: round; stroke-linecap: round; }
-    .loop { fill: none; stroke: #5ce1e6; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; opacity: 0.9; }
-    .loophot { fill: none; stroke: #ecfeff; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
-    .dot { fill: #ecfeff; }
-    @keyframes breathe {
-      0%, 100% { stroke-opacity: 0.35; }
+    .eye { fill: #5ce1e6; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 1.6px; }
+    .head { fill: #f8fafc; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 28px; font-weight: 600; }
+    .sub { fill: #94a3b8; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; }
+    .wire { fill: none; stroke: #7f9aab; stroke-width: 1.05; stroke-linejoin: round; }
+    .ridge { fill: none; stroke: #e8fffe; stroke-width: 1.5; }
+    .scan { fill: none; stroke: #5ce1e6; stroke-width: 2; stroke-linecap: round; }
+    .loop { fill: none; stroke: #5ce1e6; stroke-width: 1.7; stroke-linejoin: round; stroke-linecap: round; }
+    .hot { fill: none; stroke: #f8feff; stroke-width: 1.7; stroke-linecap: round; }
+    .dot { fill: #f8feff; }
+    .tick { fill: none; stroke: #1e293b; stroke-width: 1; }
+    @keyframes pulse {
+      0%, 100% { stroke-opacity: 0.28; }
       50% { stroke-opacity: 1; }
     }
-    @keyframes glide {
-      0% { stroke-dashoffset: 280; }
+    @keyframes sweep {
+      0% { stroke-dashoffset: 360; }
       100% { stroke-dashoffset: 0; }
     }
-    .arch { animation: breathe 5.5s ease-in-out infinite; }
-    .a2 { animation-delay: 0.4s; }
-    .a3 { animation-delay: 0.8s; }
-    .loophot { stroke-dasharray: 28 220; animation: glide 4.8s linear infinite; }
+    @keyframes glide {
+      0% { stroke-dashoffset: 220; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .wire { animation: pulse 4.2s ease-in-out infinite; }
+    .scan { stroke-dasharray: 22 340; animation: sweep 3.6s linear infinite; }
+    .hot { stroke-dasharray: 26 200; animation: glide 4.4s linear infinite; }
   </style>
-  <rect class="board" width="900" height="220" rx="12"/>
-  <rect class="edge" x="0.5" y="0.5" width="899" height="219" rx="12"/>
-  <text class="eye" x="28" y="46">HELLO, I'M SYED NAFIZ REJA HASIB</text>
-  <text class="head" x="28" y="84">Mechanics, verification, and</text>
-  <text class="head" x="28" y="116">low-carbon design in one workflow.</text>
-  <text class="sub" x="28" y="206">Computational Structural Mechanics  ·  Shells  ·  Superelastic NiTi  ·  Seismic Carbon</text>
-  <path class="arch a1" d="M560 92 Q710 28 860 92"/>
-  <path class="arch a2" d="M590 92 Q710 46 830 92"/>
-  <path class="arch a3" d="M624 92 Q710 64 796 92"/>
-  <path class="arch" d="M640 92 V70"/>
-  <path class="arch" d="M690 92 V50"/>
-  <path class="arch" d="M740 92 V50"/>
-  <path class="arch" d="M790 92 V70"/>
-  <path id="flag" class="loop" d="M575 178 L620 118 L830 110 L830 152 L640 164 Z"/>
-  <path class="loophot" d="M575 178 L620 118 L830 110 L830 152 L640 164 Z"/>
-  <circle class="dot" r="3.4">
-    <animateMotion dur="4.8s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#flag"/>
-    </animateMotion>
-  </circle>
+  <g clip-path="url(#clip)">
+    <rect width="1120" height="360" fill="#070b14"/>
+    <rect width="1120" height="360" fill="url(#grid)"/>
+    <rect width="1120" height="360" fill="url(#glow)"/>
+    <path class="tick" d="M24 24 H64 M24 24 V64 M1096 24 H1056 M1096 24 V64 M24 336 H64 M24 336 V296 M1096 336 H1056 M1096 336 V296"/>
+    <text class="eye" x="40" y="78">HELLO, I'M SYED NAFIZ REJA HASIB</text>
+    <text class="head" x="40" y="124">Mechanics, verification, and</text>
+    <text class="head" x="40" y="162">low-carbon design in one workflow.</text>
+    <text class="sub" x="40" y="206">Shells, superelastic NiTi, seismic carbon.</text>
+    <path class="wire" style="animation-delay:0.00s" d="M 634.0 169.3 L 670.4 158.3 L 706.7 148.2 L 743.1 139.9 L 779.5 133.9 L 815.8 130.7 L 852.2 130.7 L 888.5 133.9 L 924.9 139.9 L 961.3 148.2 L 997.6 158.3 L 1034.0 169.3"/>
+    <path class="wire" style="animation-delay:0.18s" d="M 637.0 170.7 L 673.4 151.6 L 709.7 134.1 L 746.1 119.6 L 782.5 109.2 L 818.8 103.8 L 855.2 103.8 L 891.5 109.2 L 927.9 119.6 L 964.3 134.1 L 1000.6 151.6 L 1037.0 170.7"/>
+    <path class="wire" style="animation-delay:0.36s" d="M 640.0 172.0 L 676.4 150.0 L 712.7 129.8 L 749.1 113.1 L 785.5 101.0 L 821.8 94.8 L 858.2 94.8 L 894.5 101.0 L 930.9 113.1 L 967.3 129.8 L 1003.6 150.0 L 1040.0 172.0"/>
+    <path class="wire" style="animation-delay:0.54s" d="M 643.0 173.3 L 679.4 154.3 L 715.7 136.8 L 752.1 122.3 L 788.5 111.9 L 824.8 106.5 L 861.2 106.5 L 897.5 111.9 L 933.9 122.3 L 970.3 136.8 L 1006.6 154.3 L 1043.0 173.3"/>
+    <path class="wire" style="animation-delay:0.72s" d="M 646.0 174.7 L 682.4 163.7 L 718.7 153.6 L 755.1 145.2 L 791.5 139.2 L 827.8 136.1 L 864.2 136.1 L 900.5 139.2 L 936.9 145.2 L 973.3 153.6 L 1009.6 163.7 L 1046.0 174.7"/>
+    <path class="wire" style="animation-delay:0.90s" d="M 631.0 168.0 L 634.0 169.3 L 637.0 170.7 L 640.0 172.0 L 643.0 173.3 L 646.0 174.7 L 649.0 176.0"/>
+    <path class="wire" style="animation-delay:1.08s" d="M 667.4 168.0 L 670.4 158.3 L 673.4 151.6 L 676.4 150.0 L 679.4 154.3 L 682.4 163.7 L 685.4 176.0"/>
+    <path class="wire" style="animation-delay:1.26s" d="M 703.7 168.0 L 706.7 148.2 L 709.7 134.1 L 712.7 129.8 L 715.7 136.8 L 718.7 153.6 L 721.7 176.0"/>
+    <path class="wire" style="animation-delay:1.44s" d="M 740.1 168.0 L 743.1 139.9 L 746.1 119.6 L 749.1 113.1 L 752.1 122.3 L 755.1 145.2 L 758.1 176.0"/>
+    <path class="wire" style="animation-delay:0.00s" d="M 776.5 168.0 L 779.5 133.9 L 782.5 109.2 L 785.5 101.0 L 788.5 111.9 L 791.5 139.2 L 794.5 176.0"/>
+    <path class="wire" style="animation-delay:0.18s" d="M 812.8 168.0 L 815.8 130.7 L 818.8 103.8 L 821.8 94.8 L 824.8 106.5 L 827.8 136.1 L 830.8 176.0"/>
+    <path class="wire" style="animation-delay:0.36s" d="M 849.2 168.0 L 852.2 130.7 L 855.2 103.8 L 858.2 94.8 L 861.2 106.5 L 864.2 136.1 L 867.2 176.0"/>
+    <path class="wire" style="animation-delay:0.54s" d="M 885.5 168.0 L 888.5 133.9 L 891.5 109.2 L 894.5 101.0 L 897.5 111.9 L 900.5 139.2 L 903.5 176.0"/>
+    <path class="wire" style="animation-delay:0.72s" d="M 921.9 168.0 L 924.9 139.9 L 927.9 119.6 L 930.9 113.1 L 933.9 122.3 L 936.9 145.2 L 939.9 176.0"/>
+    <path class="wire" style="animation-delay:0.90s" d="M 958.3 168.0 L 961.3 148.2 L 964.3 134.1 L 967.3 129.8 L 970.3 136.8 L 973.3 153.6 L 976.3 176.0"/>
+    <path class="wire" style="animation-delay:1.08s" d="M 994.6 168.0 L 997.6 158.3 L 1000.6 151.6 L 1003.6 150.0 L 1006.6 154.3 L 1009.6 163.7 L 1012.6 176.0"/>
+    <path class="wire" style="animation-delay:1.26s" d="M 1031.0 168.0 L 1034.0 169.3 L 1037.0 170.7 L 1040.0 172.0 L 1043.0 173.3 L 1046.0 174.7 L 1049.0 176.0"/>
+    <path class="ridge" d="M 640.0 172.0 L 676.4 150.0 L 712.7 129.8 L 749.1 113.1 L 785.5 101.0 L 821.8 94.8 L 858.2 94.8 L 894.5 101.0 L 930.9 113.1 L 967.3 129.8 L 1003.6 150.0 L 1040.0 172.0"/>
+    <path class="scan" d="M 640.0 172.0 L 676.4 150.0 L 712.7 129.8 L 749.1 113.1 L 785.5 101.0 L 821.8 94.8 L 858.2 94.8 L 894.5 101.0 L 930.9 113.1 L 967.3 129.8 L 1003.6 150.0 L 1040.0 172.0"/>
+    <path id="flag" class="loop" d="M700 286 L748 232 L980 222 L980 268 L760 280 Z"/>
+    <path class="hot" d="M700 286 L748 232 L980 222 L980 268 L760 280 Z"/>
+    <circle class="dot" r="3.6">
+      <animateMotion dur="4.4s" repeatCount="indefinite">
+        <mpath href="#flag"/>
+      </animateMotion>
+    </circle>
+  </g>
+  <rect x="0.5" y="0.5" width="1119" height="359" rx="16" fill="none" stroke="#1e293b"/>
 </svg>
