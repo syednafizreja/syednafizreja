@@ -1,51 +1,30 @@
-<div align="center">
+# Syed Nafiz Reja Hasib
 
-<img src="./hero.svg" width="940" alt="Research direction: how can computational design and mechanics find structural forms that stay safe in earthquakes and use less material and carbon? Concrete shells are the test case. Animated hanging chain inverting into a compression arch." />
+BEng Civil Engineering, Southwest Petroleum University. Two years of experimental cyclic-durability testing on superelastic NiTi components at Denco Manufacturing.
 
-<br><br>
+That testing led to independent research in computational solid mechanics, seismic systems, thin-shell stability, and embodied carbon.
 
-<h3>Research Overview</h3>
+[Portfolio website](https://syednafizreja.github.io/) · [ORCID 0009-0002-7162-7890](https://orcid.org/0009-0002-7162-7890)
 
-<table border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td width="420" valign="top" align="center">
-      <img src="./structural-shell.svg" width="410" alt="Illustrative parametric shell with finite element mesh" />
-    </td>
-    <td width="15"></td>
-    <td width="510" valign="top" align="center">
-      <img src="./research-spine.svg" width="510" alt="Research spine: computational design and mechanics at the core, applied in four projects from pavement material to whole building" />
-    </td>
-  </tr>
-</table>
+## Flagship research
 
-<br>
+| Project | Mechanics and methods | Key finding and observed limitation | Code and preprint |
+| --- | --- | --- | --- |
+| Diagrid frames with superelastic NiTi | Auricchio-Sacco 1D return map, PyTorch inverse identification, OpenSeesPy, Gaussian-process surrogate and NSGA-II | Residual drift fell from 0.0659% to 0.0175%. Peak drift rose from 1.79% to 3.40%, and embodied carbon rose by 620.9 kgCO2e. The constitutive model is 1D and isothermal. | [Code](https://github.com/syednafizreja/diagrid-seismic-opt) · [10.5281/zenodo.24559613](https://doi.org/10.5281/zenodo.24559613) |
+| Equal-volume shell buckling | CalculiX linear buckling, Scordelis-Lo and Zoelly benchmarks, mode-1 geometric imperfections | Stress-line ribs lost 31.10% of buckling capacity. An optimised thickness field gained 25.74%, and 15.03% once a mode-1 imperfection is included. The analysis is elastic only. | [Code](https://github.com/syednafizreja/stress-line-ribs-shell-buckling) · [10.5281/zenodo.24560903](https://doi.org/10.5281/zenodo.24560903) |
+| ShellBench | OpenSeesPy and CalculiX across 5,184 shell-floor designs, with 287 tests | Median whole-building A1-A3 carbon fell by 5.7% on 32 of 33 reinforced-concrete frames. Floor-only gains are diluted by seismic frame demands. | [Code](https://github.com/syednafizreja/ShellBench) |
+| ShellForm and ShellLab | Force-density form-finding, with a Three.js solver in the browser | 79 of 84 seismic pairs stay within 5% carbon. Buckling and minimum thickness govern over the form-finding choice. | [ShellForm](https://github.com/syednafizreja/ShellForm) · [ShellLab](https://github.com/syednafizreja/ShellLab) · [Live tool](https://syednafizreja.github.io/ShellLab/) |
 
-<!-- AUTO:badges -->
-[![Website](https://img.shields.io/badge/Website-syednafizreja.github.io-0ea5e9?style=flat-square&logo=githubpages&logoColor=white)](https://syednafizreja.github.io/)
-[![ORCID](https://img.shields.io/badge/ORCID-0009--0002--7162--7890-a6ce39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0009-0002-7162-7890)
-[![ResearchGate](https://img.shields.io/badge/ResearchGate-Syed_Nafiz_Reja_Hasib-00CCBB?style=flat-square&logo=researchgate&logoColor=white)](https://www.researchgate.net/profile/Syed-Nafiz-Reja-Hasib)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-syednafizreja-0a66c2?style=flat-square)](https://www.linkedin.com/in/syednafizreja)
-[![Email](https://img.shields.io/badge/Email-syednafiz2811%40gmail.com-0284c7?style=flat-square&logo=gmail&logoColor=white)](mailto:syednafiz2811@gmail.com)
-<!-- /AUTO:badges -->
+## Open research questions (2027-2029 graduate focus)
 
-</div>
+- **STRAINS.** Three-dimensional thermomechanical constitutive models and cyclic fatigue of shape-memory alloys. The diagrid result uses a 1D isothermal return map, so temperature coupling and 3D cyclic degradation are outside it.
+- **MS2.** Imperfection-sensitive shell stability, homogenisation, and enriched continua. The rib comparison is elastic, and a mode-1 imperfection already cuts the thickness gain from 25.74% to 15.03%.
+- **FRP++.** Lightweight fibre-reinforced composite and hybrid low-carbon structural systems. Shell floors cut median whole-building A1-A3 carbon by 5.7% on 32 of 33 frames, while the NiTi devices added 620.9 kgCO2e. The frame and the device still bound the saving.
 
----
+## Technical stack
 
-### Projects
+Solvers and mechanics: OpenSeesPy, CalculiX, force-density form-finding, Auricchio-Sacco return mapping.
 
-<!-- AUTO:projects -->
-* [**ShellBench**](https://github.com/syednafizreja/ShellBench): Computational benchmark of funicular shell floors in seismic RC frame buildings: design, seismic checks and embodied carbon.
-* [**ShellForm**](https://github.com/syednafizreja/Shellform): Form-finding and finite-element sizing of concrete shells under gravity and seismic loads, with embodied carbon tracked.
-* [**ShellLab**](https://github.com/syednafizreja/ShellLab): Force-density form finding for concrete shells in the browser, with support thrust and carbon; solver checked against ShellForm. · [Live demo](https://syednafizreja.github.io/ShellLab/)
-* [**Stress-line ribs vs thickness**](https://github.com/syednafizreja/stress-line-ribs-shell-buckling): Buckling of a thin concrete shell at equal concrete: stress-line ribs, a rib grid and a CMA-ES optimised thickness field compared in CalculiX, with IFC4 exports.
-* [**Nano-WMA**](https://github.com/syednafizreja/nano-wma-lca-model): Life-cycle assessment linking nano-modified asphalt durability to carbon emissions.
-<!-- /AUTO:projects -->
+Scientific Python and machine learning: PyTorch inverse identification, Gaussian-process surrogates, NSGA-II.
 
-### Selected Publications
-
-<!-- AUTO:publications -->
-1. [Edge AI and IoT for Real-Time Structural Health Monitoring](https://doi.org/10.59324/jaitd.2026.2(5).07), *Journal of Artificial Intelligence and Technological Development*, 2026
-2. [Integration of Nano-Additives in Warm Mix Asphalt: Enhancing Moisture Resistance and Long-Term Durability](https://doi.org/10.59324/ejtas.2024.2(6).39), *European Journal of Theoretical and Applied Sciences*, 2024
-3. [Application of BIM in Civil Engineering](https://doi.org/10.59324/ejtas.2024.2(4).51), *European Journal of Theoretical and Applied Sciences*, 2024
-<!-- /AUTO:publications -->
+Verification and web: the ShellBench suite (287 tests), and ShellLab in Three.js checked against ShellForm.
