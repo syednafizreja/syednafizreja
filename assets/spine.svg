@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 728" role="img" aria-labelledby="st sd">
+  <title id="st">Research spine: NiTi diagrid, shell ribs, ShellBench, ShellForm.</title>
+  <desc id="sd">Four studies in order. Residual drift 0.0659 percent to 0.0175 percent. Ribs minus 31.10 percent, thickness plus 25.74 percent. Median carbon minus 5.7 percent. 79 of 84 pairs within 5 percent.</desc>
+  <style>
+    .board { fill: #10141b; }
+    .card rect { fill: #171d27; stroke: #2c3848; stroke-width: 1; }
+    .idx { fill: #67e8f9; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; letter-spacing: 1px; }
+    .title { fill: #f2f6fb; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 600; }
+    .stat { fill: #f4fbff; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 26px; font-weight: 600; }
+    .stat2 { fill: #8ea0b3; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
+    .line { fill: #c5d0db; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
+    .limit { fill: #e7c27a; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
+    .rail { fill: none; stroke: #243246; stroke-width: 2; }
+    .railhot { fill: none; stroke: #67e8f9; stroke-width: 2; stroke-linecap: round; }
+    .station { fill: #10141b; stroke: #67e8f9; stroke-width: 2; }
+    .comet { fill: #e8fffb; }
+    @keyframes rise {
+      0%, 100% { stroke: #2c3848; }
+      40% { stroke: #67e8f9; }
+    }
+    @keyframes ping {
+      0%, 100% { r: 5; stroke-opacity: 0.7; }
+      50% { r: 7; stroke-opacity: 1; }
+    }
+    @keyframes run {
+      0% { stroke-dashoffset: 640; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .card rect { animation: rise 4.8s ease-in-out infinite; }
+    .station { animation: ping 4.8s ease-in-out infinite; }
+    .railhot { stroke-dasharray: 46 600; animation: run 4.8s linear infinite; }
+  </style>
+  <rect class="board" width="1120" height="728" rx="18"/>
+  <path class="rail" d="M 78 108.0 L 78 280.0 L 78 452.0 L 78 624.0"/>
+  <path id="spine" class="railhot" d="M 78 108.0 L 78 280.0 L 78 452.0 L 78 624.0"/>
+    <g class="card" style="animation-delay:0.0s">
+      <rect x="156" y="24" width="470" height="168" rx="14"/>
+      <text class="idx" x="178" y="60">01</text>
+      <text class="title" x="220" y="60">NiTi diagrid</text>
+      <text class="stat" x="178" y="110">0.0659%  →  0.0175%</text>
+      <text class="stat2" x="178" y="136">residual drift</text>
+      <text class="line" x="178" y="162">Peak drift 1.79% → 3.40%. Carbon +620.9 kgCO2e.</text>
+      <text class="limit" x="178" y="180">Stops at a 1D isothermal bar.</text>
+    </g>
+    <g class="card" style="animation-delay:0.6s">
+      <rect x="156" y="196" width="470" height="168" rx="14"/>
+      <text class="idx" x="178" y="232">02</text>
+      <text class="title" x="220" y="232">Ribs vs thickness</text>
+      <text class="stat" x="178" y="282">−31.10%   /   +25.74%</text>
+      <text class="stat2" x="178" y="308">ribs lost, thickness gained</text>
+      <text class="line" x="178" y="334">Mode-1 imperfection: the gain is +15.03%.</text>
+      <text class="limit" x="178" y="352">Elastic buckling only.</text>
+    </g>
+    <g class="card" style="animation-delay:1.2s">
+      <rect x="156" y="368" width="470" height="168" rx="14"/>
+      <text class="idx" x="178" y="404">03</text>
+      <text class="title" x="220" y="404">ShellBench</text>
+      <text class="stat" x="178" y="454">−5.7% median carbon</text>
+      <text class="stat2" x="178" y="480">whole building, A1-A3</text>
+      <text class="line" x="178" y="506">32 of 33 frames. 5,184 designs. 287 tests.</text>
+      <text class="limit" x="178" y="524">The seismic frame dilutes the floor.</text>
+    </g>
+    <g class="card" style="animation-delay:1.8s">
+      <rect x="156" y="540" width="470" height="168" rx="14"/>
+      <text class="idx" x="178" y="576">04</text>
+      <text class="title" x="220" y="576">ShellForm + ShellLab</text>
+      <text class="stat" x="178" y="626">79 / 84 within 5%</text>
+      <text class="stat2" x="178" y="652">seismic pairs, same carbon band</text>
+      <text class="line" x="178" y="678">Force density in code, and again in the browser.</text>
+      <text class="limit" x="178" y="696">Buckling and thickness govern.</text>
+    </g>
+    <circle class="station" style="animation-delay:0.0s" cx="78" cy="108.0" r="5"/>
+    <circle class="station" style="animation-delay:0.6s" cx="78" cy="280.0" r="5"/>
+    <circle class="station" style="animation-delay:1.2s" cx="78" cy="452.0" r="5"/>
+    <circle class="station" style="animation-delay:1.8s" cx="78" cy="624.0" r="5"/>
+  <circle class="comet" r="4">
+    <animateMotion dur="4.8s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#spine"/>
+    </animateMotion>
+  </circle>
+  <rect width="1120" height="728" rx="18" fill="none" stroke="#243140"/>
+</svg>
