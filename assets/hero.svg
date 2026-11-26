@@ -1,106 +1,123 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 360" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 420" role="img" aria-labelledby="t d">
   <title id="t">Syed Nafiz Reja Hasib. Computational structural mechanics.</title>
-  <desc id="d">Animated shell mesh, a travelling highlight, and a NiTi hysteresis loop.</desc>
+  <desc id="d">A NiTi loop feeds a diagrid bay and a thin shell on a frame. The shell crossfades into a dented shape while the frame sways.</desc>
   <defs>
     <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1a2330"/>
-      <stop offset="0.55" stop-color="#10141b"/>
+      <stop offset="0" stop-color="#161d28"/>
       <stop offset="1" stop-color="#0c1016"/>
     </linearGradient>
-    <radialGradient id="glow" cx="78%" cy="42%" r="38%">
-      <stop offset="0" stop-color="#67e8f9" stop-opacity="0.16"/>
+    <radialGradient id="glow" cx="74%" cy="38%" r="32%">
+      <stop offset="0" stop-color="#67e8f9" stop-opacity="0.18"/>
       <stop offset="1" stop-color="#67e8f9" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="0.8" fill="#243140"/>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.7" fill="#223044"/>
     </pattern>
-    <clipPath id="clip"><rect width="1120" height="360" rx="18"/></clipPath>
+    <clipPath id="clip"><rect width="1120" height="420" rx="20"/></clipPath>
   </defs>
   <style>
-    .panel { fill: url(#wash); }
-    .tick { fill: #67e8f9; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; letter-spacing: 2.2px; }
-    .name { fill: #f2f6fb; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 38px; font-weight: 600; }
-    .sub { fill: #a9b4c2; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 16px; }
-    .quiet { fill: #6e7c8d; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
-    .wire { fill: none; stroke: #8fb6c6; stroke-width: 1.05; stroke-linejoin: round; }
-    .ridge { fill: none; stroke: #d7fbff; stroke-width: 1.7; stroke-linejoin: round; }
-    .node { fill: #bff6ff; }
-    .loop { fill: none; stroke: #67e8f9; stroke-width: 1.7; stroke-linecap: round; }
-    .axis { stroke: #314052; stroke-width: 1; }
-    .scan { fill: none; stroke: #e8fffb; stroke-width: 2.2; stroke-linecap: round; opacity: 0.85; }
-    @keyframes breathe {
-      0%, 100% { stroke-opacity: 0.28; }
-      50% { stroke-opacity: 0.95; }
+    .kicker { fill: #67e8f9; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; letter-spacing: 2.4px; }
+    .name { fill: #f4f7fb; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 34px; font-weight: 600; }
+    .sub { fill: #c5d0dc; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 16px; }
+    .quiet { fill: #7e8c9d; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
+    .wire { fill: none; stroke: #9fd0de; stroke-width: 1.05; stroke-linejoin: round; }
+    .dent { fill: none; stroke: #e7c27a; stroke-width: 1.05; stroke-linejoin: round; }
+    .crown { fill: none; stroke: #f3feff; stroke-width: 1.6; }
+    .member { fill: none; stroke: #d5dee8; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+    .brace { fill: none; stroke: #67e8f9; stroke-width: 1.5; stroke-linecap: round; }
+    .ground { stroke: #2c3b4e; stroke-width: 1; }
+    .loop { fill: none; stroke: #67e8f9; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .spine { fill: none; stroke: #67e8f9; stroke-width: 1.4; stroke-linecap: round; opacity: 0.85; }
+    .bead { fill: #f4feff; }
+    @keyframes sway {
+      0%, 100% { transform: rotate(-0.45deg); }
+      50% { transform: rotate(0.45deg); }
     }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-7px); }
+    @keyframes swap {
+      0%, 40% { opacity: 1; }
+      55%, 88% { opacity: 0.08; }
+      100% { opacity: 1; }
     }
     @keyframes draw {
-      0% { stroke-dashoffset: 280; opacity: 0.2; }
-      45% { stroke-dashoffset: 0; opacity: 1; }
-      100% { stroke-dashoffset: 0; opacity: 1; }
+      0% { stroke-dashoffset: 240; }
+      50% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 0; }
     }
-    @keyframes sweep {
-      0% { stroke-dashoffset: 420; }
-      100% { stroke-dashoffset: -420; }
+    @keyframes flow {
+      0% { stroke-dashoffset: 80; }
+      100% { stroke-dashoffset: 0; }
     }
-    .mesh { animation: float 7.5s ease-in-out infinite; }
-    .wire { animation: breathe 3.8s ease-in-out infinite; }
-    .node { animation: breathe 3.8s ease-in-out infinite; }
-    .loop { stroke-dasharray: 280; animation: draw 5.8s ease-in-out infinite; }
-    .scan { stroke-dasharray: 28 390; animation: sweep 4.8s linear infinite; }
+    @keyframes travel {
+      0% { stroke-dashoffset: 520; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .building { transform-origin: 790px 352px; transform-box: view-box; animation: sway 6.4s ease-in-out infinite; }
+    .perfect { animation: swap 7.2s ease-in-out infinite; }
+    .imperfect { animation: swap 7.2s ease-in-out infinite reverse; }
+    .loop { stroke-dasharray: 240; animation: draw 5.2s ease-in-out infinite; }
+    .brace { stroke-dasharray: 8 10; animation: flow 1.6s linear infinite; }
+    .spine { stroke-dasharray: 10 14; animation: travel 3.6s linear infinite; }
   </style>
   <g clip-path="url(#clip)">
-    <rect class="panel" width="1120" height="360"/>
-    <rect width="1120" height="360" fill="url(#dots)"/>
-    <rect width="1120" height="360" fill="url(#glow)"/>
-    <text class="tick" x="48" y="64">COMPUTATIONAL STRUCTURAL MECHANICS</text>
-    <text class="name" x="48" y="122">Syed Nafiz Reja Hasib</text>
-    <text class="sub" x="48" y="164">Shells, superelastic alloys, and low-carbon seismic design</text>
-    <text class="quiet" x="48" y="214">One spine: the alloy, the shell, the frame, the form.</text>
-    <text class="quiet" x="48" y="238">Each result kept with the place it gives up.</text>
-    <line class="axis" x1="78" y1="292" x2="250" y2="292"/>
-    <path class="loop" d="M78 292 C118 292 132 252 164 252 C204 252 214 292 250 292 C214 292 204 328 164 328 C132 328 118 292 78 292"/>
-    <text class="quiet" x="78" y="252">NiTi loop, redrawn</text>
-    <g class="mesh">
-    <path class="wire" style="animation-delay:0.00s" d="M 747.6 43.8 L 775.7 42.5 L 803.8 40.8 L 831.8 39.2 L 859.9 38.0 L 888.0 37.6 L 916.1 38.0 L 944.2 39.2 L 972.2 40.8 L 1000.3 42.5 L 1028.4 43.8"/>
-    <path class="wire" style="animation-delay:0.12s" d="M 741.0 72.1 L 770.4 68.6 L 799.8 64.4 L 829.2 60.3 L 858.6 57.2 L 888.0 56.1 L 917.4 57.2 L 946.8 60.3 L 976.2 64.4 L 1005.6 68.6 L 1035.0 72.1"/>
-    <path class="wire" style="animation-delay:0.24s" d="M 734.4 99.6 L 765.1 93.4 L 795.8 86.0 L 826.6 78.8 L 857.3 73.4 L 888.0 71.4 L 918.7 73.4 L 949.4 78.8 L 980.2 86.0 L 1010.9 93.4 L 1041.6 99.6"/>
-    <path class="wire" style="animation-delay:0.36s" d="M 727.8 129.2 L 759.8 121.8 L 791.9 112.9 L 823.9 104.1 L 856.0 97.6 L 888.0 95.2 L 920.0 97.6 L 952.1 104.1 L 984.1 112.9 L 1016.2 121.8 L 1048.2 129.2"/>
-    <path class="wire" style="animation-delay:0.48s" d="M 721.2 163.0 L 754.6 156.8 L 787.9 149.5 L 821.3 142.2 L 854.6 136.8 L 888.0 134.8 L 921.4 136.8 L 954.7 142.2 L 988.1 149.5 L 1021.4 156.8 L 1054.8 163.0"/>
-    <path class="wire" style="animation-delay:0.60s" d="M 714.6 199.0 L 749.3 195.5 L 784.0 191.3 L 818.6 187.2 L 853.3 184.1 L 888.0 183.0 L 922.7 184.1 L 957.4 187.2 L 992.0 191.3 L 1026.7 195.5 L 1061.4 199.0"/>
-    <path class="wire" style="animation-delay:0.72s" d="M 708.0 234.1 L 744.0 232.8 L 780.0 231.2 L 816.0 229.5 L 852.0 228.4 L 888.0 227.9 L 924.0 228.4 L 960.0 229.5 L 996.0 231.2 L 1032.0 232.8 L 1068.0 234.1"/>
-    <path class="wire" style="animation-delay:0.84s" d="M 747.6 43.8 L 741.0 72.1 L 734.4 99.6 L 727.8 129.2 L 721.2 163.0 L 714.6 199.0 L 708.0 234.1"/>
-    <path class="wire" style="animation-delay:0.96s" d="M 775.7 42.5 L 770.4 68.6 L 765.1 93.4 L 759.8 121.8 L 754.6 156.8 L 749.3 195.5 L 744.0 232.8"/>
-    <path class="wire" style="animation-delay:1.08s" d="M 803.8 40.8 L 799.8 64.4 L 795.8 86.0 L 791.9 112.9 L 787.9 149.5 L 784.0 191.3 L 780.0 231.2"/>
-    <path class="wire" style="animation-delay:1.20s" d="M 831.8 39.2 L 829.2 60.3 L 826.6 78.8 L 823.9 104.1 L 821.3 142.2 L 818.6 187.2 L 816.0 229.5"/>
-    <path class="wire" style="animation-delay:1.32s" d="M 859.9 38.0 L 858.6 57.2 L 857.3 73.4 L 856.0 97.6 L 854.6 136.8 L 853.3 184.1 L 852.0 228.4"/>
-    <path class="wire" style="animation-delay:1.44s" d="M 888.0 37.6 L 888.0 56.1 L 888.0 71.4 L 888.0 95.2 L 888.0 134.8 L 888.0 183.0 L 888.0 227.9"/>
-    <path class="wire" style="animation-delay:1.56s" d="M 916.1 38.0 L 917.4 57.2 L 918.7 73.4 L 920.0 97.6 L 921.4 136.8 L 922.7 184.1 L 924.0 228.4"/>
-    <path class="wire" style="animation-delay:1.68s" d="M 944.2 39.2 L 946.8 60.3 L 949.4 78.8 L 952.1 104.1 L 954.7 142.2 L 957.4 187.2 L 960.0 229.5"/>
-    <path class="wire" style="animation-delay:1.80s" d="M 972.2 40.8 L 976.2 64.4 L 980.2 86.0 L 984.1 112.9 L 988.1 149.5 L 992.0 191.3 L 996.0 231.2"/>
-    <path class="wire" style="animation-delay:1.92s" d="M 1000.3 42.5 L 1005.6 68.6 L 1010.9 93.4 L 1016.2 121.8 L 1021.4 156.8 L 1026.7 195.5 L 1032.0 232.8"/>
-    <path class="wire" style="animation-delay:2.04s" d="M 1028.4 43.8 L 1035.0 72.1 L 1041.6 99.6 L 1048.2 129.2 L 1054.8 163.0 L 1061.4 199.0 L 1068.0 234.1"/>
-      <path class="ridge" d="M 727.8 129.2 L 759.8 121.8 L 791.9 112.9 L 823.9 104.1 L 856.0 97.6 L 888.0 95.2 L 920.0 97.6 L 952.1 104.1 L 984.1 112.9 L 1016.2 121.8 L 1048.2 129.2"/>
-      <path class="ridge" d="M 888.0 37.6 L 888.0 56.1 L 888.0 71.4 L 888.0 95.2 L 888.0 134.8 L 888.0 183.0 L 888.0 227.9"/>
-      <path class="scan" d="M 727.8 129.2 L 759.8 121.8 L 791.9 112.9 L 823.9 104.1 L 856.0 97.6 L 888.0 95.2 L 920.0 97.6 L 952.1 104.1 L 984.1 112.9 L 1016.2 121.8 L 1048.2 129.2"/>
-    <circle class="node" cx="770.4" cy="68.6" r="1.7"/>
-    <circle class="node" cx="829.2" cy="60.3" r="1.7"/>
-    <circle class="node" cx="888.0" cy="56.1" r="1.7"/>
-    <circle class="node" cx="946.8" cy="60.3" r="1.7"/>
-    <circle class="node" cx="1005.6" cy="68.6" r="1.7"/>
-    <circle class="node" cx="759.8" cy="121.8" r="1.7"/>
-    <circle class="node" cx="823.9" cy="104.1" r="1.7"/>
-    <circle class="node" cx="888.0" cy="95.2" r="1.7"/>
-    <circle class="node" cx="952.1" cy="104.1" r="1.7"/>
-    <circle class="node" cx="1016.2" cy="121.8" r="1.7"/>
-    <circle class="node" cx="749.3" cy="195.5" r="1.7"/>
-    <circle class="node" cx="818.6" cy="187.2" r="1.7"/>
-    <circle class="node" cx="888.0" cy="183.0" r="1.7"/>
-    <circle class="node" cx="957.4" cy="187.2" r="1.7"/>
-    <circle class="node" cx="1026.7" cy="195.5" r="1.7"/>
+    <rect width="1120" height="420" fill="url(#wash)"/>
+    <rect width="1120" height="420" fill="url(#dots)"/>
+    <rect width="1120" height="420" fill="url(#glow)"/>
+    <text class="kicker" x="44" y="68">COMPUTATIONAL STRUCTURAL MECHANICS</text>
+    <text class="name" x="44" y="122">Syed Nafiz Reja Hasib</text>
+    <text class="sub" x="44" y="164">Shells, superelastic alloys,</text>
+    <text class="sub" x="44" y="188">and low-carbon seismic design</text>
+    <text class="quiet" x="44" y="232">The alloy goes into the frame.</text>
+    <text class="quiet" x="44" y="252">The shell takes the floor. The count is carbon.</text>
+    <line class="ground" x1="48" y1="318" x2="250" y2="318"/>
+    <path class="loop" id="loop" d="M64 318 C108 318 124 276 156 276 C196 276 208 318 246 318 C208 318 196 356 156 356 C124 356 108 318 64 318"/>
+    <text class="quiet" x="64" y="272">NiTi, each cycle</text>
+    <path id="feed" class="spine" d="M246 318 C420 336 520 250 640 214 C700 196 730 150 790 118"/>
+    <circle class="bead" r="3.2">
+      <animateMotion dur="3.6s" repeatCount="indefinite">
+        <mpath href="#feed"/>
+      </animateMotion>
+    </circle>
+    <g class="building">
+      <path class="member" d="M620 168 H960 M620 268 H960 M620 352 H960 M620 168 V352 M790 168 V352 M960 168 V352"/>
+      <path class="brace" d="M620 268 L790 168 M790 268 L620 168"/>
+      <g class="perfect">
+      <path class="wire" d="M 801.0 176.0 L 817.2 176.0 L 833.4 176.0 L 849.7 176.0 L 865.9 176.0 L 882.1 176.0 L 898.3 176.0 L 914.6 176.0 L 930.8 176.0 L 947.0 176.0"/>
+      <path class="wire" d="M 802.2 176.0 L 818.4 161.9 L 834.6 149.6 L 850.9 140.4 L 867.1 135.5 L 883.3 135.5 L 899.5 140.4 L 915.8 149.6 L 932.0 161.9 L 948.2 176.0"/>
+      <path class="wire" d="M 803.4 176.0 L 819.6 153.2 L 835.8 133.2 L 852.1 118.3 L 868.3 110.4 L 884.5 110.4 L 900.7 118.3 L 917.0 133.2 L 933.2 153.2 L 949.4 176.0"/>
+      <path class="wire" d="M 804.6 176.0 L 820.8 153.2 L 837.0 133.2 L 853.3 118.3 L 869.5 110.4 L 885.7 110.4 L 901.9 118.3 L 918.2 133.2 L 934.4 153.2 L 950.6 176.0"/>
+      <path class="wire" d="M 805.8 176.0 L 822.0 161.9 L 838.2 149.6 L 854.5 140.4 L 870.7 135.5 L 886.9 135.5 L 903.1 140.4 L 919.4 149.6 L 935.6 161.9 L 951.8 176.0"/>
+      <path class="wire" d="M 807.0 176.0 L 823.2 176.0 L 839.4 176.0 L 855.7 176.0 L 871.9 176.0 L 888.1 176.0 L 904.3 176.0 L 920.6 176.0 L 936.8 176.0 L 953.0 176.0"/>
+      <path class="wire" d="M 801.0 176.0 L 802.2 176.0 L 803.4 176.0 L 804.6 176.0 L 805.8 176.0 L 807.0 176.0"/>
+      <path class="wire" d="M 817.2 176.0 L 818.4 161.9 L 819.6 153.2 L 820.8 153.2 L 822.0 161.9 L 823.2 176.0"/>
+      <path class="wire" d="M 833.4 176.0 L 834.6 149.6 L 835.8 133.2 L 837.0 133.2 L 838.2 149.6 L 839.4 176.0"/>
+      <path class="wire" d="M 849.7 176.0 L 850.9 140.4 L 852.1 118.3 L 853.3 118.3 L 854.5 140.4 L 855.7 176.0"/>
+      <path class="wire" d="M 865.9 176.0 L 867.1 135.5 L 868.3 110.4 L 869.5 110.4 L 870.7 135.5 L 871.9 176.0"/>
+      <path class="wire" d="M 882.1 176.0 L 883.3 135.5 L 884.5 110.4 L 885.7 110.4 L 886.9 135.5 L 888.1 176.0"/>
+      <path class="wire" d="M 898.3 176.0 L 899.5 140.4 L 900.7 118.3 L 901.9 118.3 L 903.1 140.4 L 904.3 176.0"/>
+      <path class="wire" d="M 914.6 176.0 L 915.8 149.6 L 917.0 133.2 L 918.2 133.2 L 919.4 149.6 L 920.6 176.0"/>
+      <path class="wire" d="M 930.8 176.0 L 932.0 161.9 L 933.2 153.2 L 934.4 153.2 L 935.6 161.9 L 936.8 176.0"/>
+      <path class="wire" d="M 947.0 176.0 L 948.2 176.0 L 949.4 176.0 L 950.6 176.0 L 951.8 176.0 L 953.0 176.0"/>
+        <path class="crown" d="M 804.6 176.0 L 820.8 153.2 L 837.0 133.2 L 853.3 118.3 L 869.5 110.4 L 885.7 110.4 L 901.9 118.3 L 918.2 133.2 L 934.4 153.2 L 950.6 176.0"/>
+      </g>
+      <g class="imperfect">
+      <path class="dent" d="M 801.0 176.0 L 817.2 176.0 L 833.4 176.0 L 849.7 176.0 L 865.9 176.0 L 882.1 176.1 L 898.3 176.0 L 914.6 176.0 L 930.8 176.0 L 947.0 176.0"/>
+      <path class="dent" d="M 802.2 176.0 L 818.4 161.9 L 834.6 149.6 L 850.9 140.8 L 867.1 137.6 L 883.3 138.2 L 899.5 141.3 L 915.8 149.6 L 932.0 161.9 L 948.2 176.0"/>
+      <path class="dent" d="M 803.4 176.0 L 819.6 153.2 L 835.8 133.4 L 852.1 121.5 L 868.3 126.3 L 884.5 130.8 L 900.7 124.9 L 917.0 133.8 L 933.2 153.2 L 949.4 176.0"/>
+      <path class="dent" d="M 804.6 176.0 L 820.8 153.2 L 837.0 133.4 L 853.3 121.5 L 869.5 126.3 L 885.7 130.8 L 901.9 124.9 L 918.2 133.8 L 934.4 153.2 L 950.6 176.0"/>
+      <path class="dent" d="M 805.8 176.0 L 822.0 161.9 L 838.2 149.6 L 854.5 140.8 L 870.7 137.6 L 886.9 138.2 L 903.1 141.3 L 919.4 149.6 L 935.6 161.9 L 951.8 176.0"/>
+      <path class="dent" d="M 807.0 176.0 L 823.2 176.0 L 839.4 176.0 L 855.7 176.0 L 871.9 176.0 L 888.1 176.1 L 904.3 176.0 L 920.6 176.0 L 936.8 176.0 L 953.0 176.0"/>
+      <path class="dent" d="M 801.0 176.0 L 802.2 176.0 L 803.4 176.0 L 804.6 176.0 L 805.8 176.0 L 807.0 176.0"/>
+      <path class="dent" d="M 817.2 176.0 L 818.4 161.9 L 819.6 153.2 L 820.8 153.2 L 822.0 161.9 L 823.2 176.0"/>
+      <path class="dent" d="M 833.4 176.0 L 834.6 149.6 L 835.8 133.4 L 837.0 133.4 L 838.2 149.6 L 839.4 176.0"/>
+      <path class="dent" d="M 849.7 176.0 L 850.9 140.8 L 852.1 121.5 L 853.3 121.5 L 854.5 140.8 L 855.7 176.0"/>
+      <path class="dent" d="M 865.9 176.0 L 867.1 137.6 L 868.3 126.3 L 869.5 126.3 L 870.7 137.6 L 871.9 176.0"/>
+      <path class="dent" d="M 882.1 176.1 L 883.3 138.2 L 884.5 130.8 L 885.7 130.8 L 886.9 138.2 L 888.1 176.1"/>
+      <path class="dent" d="M 898.3 176.0 L 899.5 141.3 L 900.7 124.9 L 901.9 124.9 L 903.1 141.3 L 904.3 176.0"/>
+      <path class="dent" d="M 914.6 176.0 L 915.8 149.6 L 917.0 133.8 L 918.2 133.8 L 919.4 149.6 L 920.6 176.0"/>
+      <path class="dent" d="M 930.8 176.0 L 932.0 161.9 L 933.2 153.2 L 934.4 153.2 L 935.6 161.9 L 936.8 176.0"/>
+      <path class="dent" d="M 947.0 176.0 L 948.2 176.0 L 949.4 176.0 L 950.6 176.0 L 951.8 176.0 L 953.0 176.0"/>
+      </g>
     </g>
   </g>
-  <rect width="1120" height="360" rx="18" fill="none" stroke="#243140"/>
+  <rect width="1120" height="420" rx="20" fill="none" stroke="#2a3848"/>
 </svg>
