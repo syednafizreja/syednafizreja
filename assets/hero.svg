@@ -1,63 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 440" role="img" aria-labelledby="t d">
-  <title id="t">Syed Nafiz Reja Hasib. Computational structural mechanics.</title>
-  <desc id="d">Name and line of work on the left. A NiTi loop below the text. A two-bay frame on the right, diagrid in one bay and a thin shell clear of the roof in the other.</desc>
-  <defs>
-    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="0.7" fill="#1b2430"/>
-    </pattern>
-    <clipPath id="clip"><rect width="1120" height="440" rx="18"/></clipPath>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" role="img" aria-labelledby="title desc">
+  <title id="title">Syed Nafiz Reja Hasib. Mechanics, verification, and low-carbon design.</title>
+  <desc id="desc">A thin-shell arch and a superelastic flag loop. A dot traces the loop.</desc>
   <style>
-    .kicker { fill: #7aa8b3; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; letter-spacing: 1.6px; }
-    .name { fill: #eef2f6; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 32px; font-weight: 600; }
-    .sub { fill: #c3ced8; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 16px; }
-    .quiet { fill: #8d99a6; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; }
-    .member { fill: none; stroke: #aeb9c4; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
-    .brace { fill: none; stroke: #aeb9c4; stroke-width: 1.5; stroke-linecap: round; }
-    .bracehot { fill: none; stroke: #d5dee6; stroke-width: 1.5; stroke-linecap: round; }
-    .shell { fill: none; stroke: #e7eef4; stroke-width: 1.1; stroke-linejoin: round; }
-    .loop { fill: none; stroke: #8f9ba6; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-    .loophot { fill: none; stroke: #d5dee6; stroke-width: 1.6; stroke-linecap: round; }
-    @keyframes sway {
-      0%, 100% { transform: rotate(-0.25deg); }
-      50% { transform: rotate(0.25deg); }
+    .board { fill: #0b111b; }
+    .edge { fill: none; stroke: #1e293b; stroke-width: 1; }
+    .eye { fill: #5ce1e6; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 1.4px; }
+    .head { fill: #f8fafc; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 600; }
+    .sub { fill: #94a3b8; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
+    .arch { fill: none; stroke: #94a3b8; stroke-width: 1.15; stroke-linejoin: round; stroke-linecap: round; }
+    .loop { fill: none; stroke: #5ce1e6; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; opacity: 0.9; }
+    .loophot { fill: none; stroke: #ecfeff; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+    .dot { fill: #ecfeff; }
+    @keyframes breathe {
+      0%, 100% { stroke-opacity: 0.35; }
+      50% { stroke-opacity: 1; }
     }
-    @keyframes flow {
-      0% { stroke-dashoffset: 90; }
+    @keyframes glide {
+      0% { stroke-dashoffset: 280; }
       100% { stroke-dashoffset: 0; }
     }
-    .building { transform-origin: 790px 384px; transform-box: view-box; animation: sway 8s ease-in-out infinite; }
-    .bracehot, .loophot { stroke-dasharray: 16 80; animation: flow 2.8s linear infinite; }
+    .arch { animation: breathe 5.5s ease-in-out infinite; }
+    .a2 { animation-delay: 0.4s; }
+    .a3 { animation-delay: 0.8s; }
+    .loophot { stroke-dasharray: 28 220; animation: glide 4.8s linear infinite; }
   </style>
-  <g clip-path="url(#clip)">
-    <rect width="1120" height="440" fill="#101418"/>
-    <rect width="1120" height="440" fill="url(#dots)"/>
-    <text class="kicker" x="48" y="64">COMPUTATIONAL STRUCTURAL MECHANICS</text>
-    <text class="name" x="48" y="116">Syed Nafiz Reja Hasib</text>
-    <text class="sub" x="48" y="158">Shells, superelastic alloys,</text>
-    <text class="sub" x="48" y="182">and low-carbon seismic design</text>
-    <text class="quiet" x="48" y="226">The alloy goes into the frame.</text>
-    <text class="quiet" x="48" y="248">The shell takes the floor.</text>
-    <text class="quiet" x="64" y="286">NiTi cycle</text>
-    <path id="loop" class="loop" d="M56 348 C120 348 140 304 178 304 C226 304 244 348 312 348 C244 348 226 396 178 396 C140 396 120 348 56 348"/>
-    <path class="loophot" d="M56 348 C120 348 140 304 178 304 C226 304 244 348 312 348 C244 348 226 396 178 396 C140 396 120 348 56 348"/>
-    <g class="building">
-      <path class="member" d="M620 188 H980 M620 286 H980 M620 384 H980 M620 188 V384 M790 188 V384 M980 188 V384"/>
-      <path class="brace" d="M620 286 L790 188 M790 286 L620 188"/>
-      <path class="bracehot" d="M620 286 L790 188 M790 286 L620 188"/>
-      <g class="shell">
-        <path d="M 808.0 174.0 L 827.5 159.9 L 847.0 148.0 L 866.5 140.0 L 886.0 137.2 L 905.5 140.0 L 925.0 148.0 L 944.5 159.9 L 964.0 174.0"/>
-        <path d="M 808.0 174.0 L 827.5 154.1 L 847.0 137.2 L 866.5 126.0 L 886.0 122.0 L 905.5 126.0 L 925.0 137.2 L 944.5 154.1 L 964.0 174.0"/>
-        <path d="M 808.0 174.0 L 827.5 159.9 L 847.0 148.0 L 866.5 140.0 L 886.0 137.2 L 905.5 140.0 L 925.0 148.0 L 944.5 159.9 L 964.0 174.0"/>
-        <path d="M 827.5 174.0 L 827.5 159.9 L 827.5 154.1 L 827.5 159.9 L 827.5 174.0"/>
-        <path d="M 847.0 174.0 L 847.0 148.0 L 847.0 137.2 L 847.0 148.0 L 847.0 174.0"/>
-        <path d="M 866.5 174.0 L 866.5 140.0 L 866.5 126.0 L 866.5 140.0 L 866.5 174.0"/>
-        <path d="M 886.0 174.0 L 886.0 137.2 L 886.0 122.0 L 886.0 137.2 L 886.0 174.0"/>
-        <path d="M 905.5 174.0 L 905.5 140.0 L 905.5 126.0 L 905.5 140.0 L 905.5 174.0"/>
-        <path d="M 925.0 174.0 L 925.0 148.0 L 925.0 137.2 L 925.0 148.0 L 925.0 174.0"/>
-        <path d="M 944.5 174.0 L 944.5 159.9 L 944.5 154.1 L 944.5 159.9 L 944.5 174.0"/>
-      </g>
-    </g>
-  </g>
-  <rect width="1120" height="440" rx="18" fill="none" stroke="#24303c"/>
+  <rect class="board" width="900" height="220" rx="12"/>
+  <rect class="edge" x="0.5" y="0.5" width="899" height="219" rx="12"/>
+  <text class="eye" x="28" y="46">HELLO, I'M SYED NAFIZ REJA HASIB</text>
+  <text class="head" x="28" y="84">Mechanics, verification, and</text>
+  <text class="head" x="28" y="116">low-carbon design in one workflow.</text>
+  <text class="sub" x="28" y="206">Computational Structural Mechanics  ·  Shells  ·  Superelastic NiTi  ·  Seismic Carbon</text>
+  <path class="arch a1" d="M560 92 Q710 28 860 92"/>
+  <path class="arch a2" d="M590 92 Q710 46 830 92"/>
+  <path class="arch a3" d="M624 92 Q710 64 796 92"/>
+  <path class="arch" d="M640 92 V70"/>
+  <path class="arch" d="M690 92 V50"/>
+  <path class="arch" d="M740 92 V50"/>
+  <path class="arch" d="M790 92 V70"/>
+  <path id="flag" class="loop" d="M575 178 L620 118 L830 110 L830 152 L640 164 Z"/>
+  <path class="loophot" d="M575 178 L620 118 L830 110 L830 152 L640 164 Z"/>
+  <circle class="dot" r="3.4">
+    <animateMotion dur="4.8s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#flag"/>
+    </animateMotion>
+  </circle>
 </svg>
