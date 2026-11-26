@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 300" role="img" aria-labelledby="title desc">
+  <title id="title">Syed Nafiz Reja Hasib. Computational structural mechanics.</title>
+  <desc id="desc">Name and research line beside an animated thin-shell wireframe and a small NiTi hysteresis loop.</desc>
+  <style>
+    .panel { fill: #14181f; }
+    .rule { stroke: #2a3340; stroke-width: 1; }
+    .name { fill: #e7edf5; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 34px; font-weight: 620; letter-spacing: -0.4px; }
+    .sub { fill: #9aa6b5; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 15px; letter-spacing: 0.2px; }
+    .tick { fill: #67e8f9; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; letter-spacing: 1.4px; }
+    .wire { fill: none; stroke: #8fb4c4; stroke-width: 1.15; stroke-linejoin: round; stroke-linecap: round; }
+    .wire-hot { fill: none; stroke: #67e8f9; stroke-width: 1.35; }
+    .node { fill: #67e8f9; }
+    .loop { fill: none; stroke: #67e8f9; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .axis { stroke: #3d4a5c; stroke-width: 1; }
+    @keyframes breathe {
+      0%, 100% { opacity: 0.55; }
+      50% { opacity: 1; }
+    }
+    @keyframes draw {
+      0% { stroke-dashoffset: 220; }
+      55% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .wire { animation: breathe 5.6s ease-in-out infinite; }
+    .node { animation: breathe 5.6s ease-in-out infinite; animation-delay: 0.4s; }
+    .loop { stroke-dasharray: 220; animation: draw 6.4s ease-in-out infinite; }
+  </style>
+  <rect class="panel" width="1120" height="300" rx="18"/>
+  <line class="rule" x1="700" y1="36" x2="700" y2="264"/>
+  <text class="tick" x="48" y="58">COMPUTATIONAL STRUCTURAL MECHANICS</text>
+  <text class="name" x="48" y="118">Syed Nafiz Reja Hasib</text>
+  <text class="sub" x="48" y="162">Shells, superelastic alloys, and low-carbon seismic design</text>
+  <text class="sub" x="48" y="196">Solvers written against tests, buckling checks, and carbon counts.</text>
+    <path class="wire" d="M 768.0 58.0 L 804.1 54.8 L 840.2 52.5 L 876.4 51.2 L 912.5 50.7 L 948.6 51.2 L 984.7 52.5 L 1020.8 54.8 L 1057.0 58.0"/>
+    <path class="wire" d="M 768.0 90.2 L 805.3 81.8 L 842.6 75.8 L 879.9 72.1 L 917.2 70.9 L 954.5 72.1 L 991.8 75.8 L 1029.1 81.8 L 1066.4 90.2"/>
+    <path class="wire" d="M 768.0 122.4 L 806.5 111.4 L 844.9 103.5 L 883.4 98.7 L 921.9 97.1 L 960.4 98.7 L 998.8 103.5 L 1037.3 111.4 L 1075.8 122.4"/>
+    <path class="wire" d="M 768.0 154.6 L 807.6 143.6 L 847.3 135.7 L 886.9 130.9 L 926.6 129.3 L 966.2 130.9 L 1005.9 135.7 L 1045.5 143.6 L 1085.2 154.6"/>
+    <path class="wire" d="M 768.0 186.8 L 808.8 178.4 L 849.6 172.4 L 890.5 168.7 L 931.3 167.5 L 972.1 168.7 L 1012.9 172.4 L 1053.8 178.4 L 1094.6 186.8"/>
+    <path class="wire" d="M 768.0 219.0 L 810.0 215.8 L 852.0 213.5 L 894.0 212.2 L 936.0 211.7 L 978.0 212.2 L 1020.0 213.5 L 1062.0 215.8 L 1104.0 219.0"/>
+    <path class="wire" d="M 768.0 58.0 L 768.0 90.2 L 768.0 122.4 L 768.0 154.6 L 768.0 186.8 L 768.0 219.0"/>
+    <path class="wire" d="M 804.1 54.8 L 805.3 81.8 L 806.5 111.4 L 807.6 143.6 L 808.8 178.4 L 810.0 215.8"/>
+    <path class="wire" d="M 840.2 52.5 L 842.6 75.8 L 844.9 103.5 L 847.3 135.7 L 849.6 172.4 L 852.0 213.5"/>
+    <path class="wire" d="M 876.4 51.2 L 879.9 72.1 L 883.4 98.7 L 886.9 130.9 L 890.5 168.7 L 894.0 212.2"/>
+    <path class="wire" d="M 912.5 50.7 L 917.2 70.9 L 921.9 97.1 L 926.6 129.3 L 931.3 167.5 L 936.0 211.7"/>
+    <path class="wire" d="M 948.6 51.2 L 954.5 72.1 L 960.4 98.7 L 966.2 130.9 L 972.1 168.7 L 978.0 212.2"/>
+    <path class="wire" d="M 984.7 52.5 L 991.8 75.8 L 998.8 103.5 L 1005.9 135.7 L 1012.9 172.4 L 1020.0 213.5"/>
+    <path class="wire" d="M 1020.8 54.8 L 1029.1 81.8 L 1037.3 111.4 L 1045.5 143.6 L 1053.8 178.4 L 1062.0 215.8"/>
+    <path class="wire" d="M 1057.0 58.0 L 1066.4 90.2 L 1075.8 122.4 L 1085.2 154.6 L 1094.6 186.8 L 1104.0 219.0"/>
+    <circle class="node" cx="842.6" cy="75.8" r="2.2"/>
+    <circle class="node" cx="917.2" cy="70.9" r="2.2"/>
+    <circle class="node" cx="991.8" cy="75.8" r="2.2"/>
+    <circle class="node" cx="847.3" cy="135.7" r="2.2"/>
+    <circle class="node" cx="926.6" cy="129.3" r="2.2"/>
+    <circle class="node" cx="1005.9" cy="135.7" r="2.2"/>
+    <circle class="node" cx="849.6" cy="172.4" r="2.2"/>
+    <circle class="node" cx="931.3" cy="167.5" r="2.2"/>
+    <circle class="node" cx="1012.9" cy="172.4" r="2.2"/>
+  <line class="axis" x1="790" y1="248" x2="1040" y2="248"/>
+  <line class="axis" x1="860" y1="188" x2="860" y2="268"/>
+  <path class="loop" d="M860 248 C900 248 910 206 940 206 C978 206 990 248 1024 248 C990 248 978 286 940 286 C910 286 900 248 860 248"/>
+</svg>
