@@ -108,28 +108,33 @@ BLOCKS = {
 }
 
 
-def render_readme(text: str, profile: dict, derived: dict) -> str:
+def render_readme(text: str, profile: dict, derived: dict) -> str | None:
+    """Fill AUTO blocks when they exist. A hand-set README has none and is left untouched."""
+    found = False
     for name, render in BLOCKS.items():
         open_tag, close_tag = f"<!-- AUTO:{name} -->", f"<!-- /AUTO:{name} -->"
         pattern = re.compile(re.escape(open_tag) + ".*?" + re.escape(close_tag), re.DOTALL)
         if not pattern.search(text):
-            raise ValueError(f"README.md has no {open_tag} block")
+            continue
+        found = True
         body = render(profile, derived)
         text = pattern.sub(lambda _: f"{open_tag}\n{body}\n{close_tag}", text)
-    return text
+    return text if found else None
 
 
 def main() -> int:
     profile = load_profile()
     derived = derive(profile)
     readme = render_readme(README.read_text(encoding="utf-8"), profile, derived)
-    with open(README, "w", encoding="utf-8", newline="\n") as f:
-        f.write(readme)
+    if readme is not None:
+        with open(README, "w", encoding="utf-8", newline="\n") as f:
+            f.write(readme)
     site = {**{k: profile[k] for k in ("identity", "links", "projects", "publications", "timeline")}, "derived": derived}
     with open(SITE, "w", encoding="utf-8", newline="\n") as f:
         json.dump(site, f, ensure_ascii=False, indent=1)
         f.write("\n")
-    print(f"[ok] README.md and data/site.json rebuilt ({derived['peer_reviewed']} papers, {derived['tenure_short']})")
+    kept = "left README.md as written" if readme is None else "rebuilt README.md"
+    print(f"[ok] {kept}; data/site.json written ({derived['peer_reviewed']} papers, {derived['tenure_short']})")
     return 0
 
 

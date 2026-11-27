@@ -1,64 +1,213 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 280" role="img" aria-labelledby="st sd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 392" role="img" aria-labelledby="st sd">
   <title id="st">Four studies: alloy, surface, frame, form.</title>
-  <desc id="sd">Residual drift 0.0659 percent to 0.0175 percent. Ribs minus 31.10 percent, thickness plus 25.74 percent. Median carbon minus 5.7 percent. 79 of 84 pairs within 5 percent.</desc>
-  <defs>
-    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M24 0 H0 V24" fill="none" stroke="#121b2a" stroke-width="1"/>
-    </pattern>
-  </defs>
+  <desc id="sd">Residual drift 0.0659 percent to 0.0175 percent. Ribs minus 31.10 percent, orthogonal grid plus 16.05 percent, thickness plus 25.74 percent and plus 15.03 percent with a dent. Median carbon minus 5.7 percent on 32 of 33 frames. 79 of 84 pairs within 5 percent.</desc>
   <style>
-    .idx { fill: #5ce1e6; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; letter-spacing: 1px; }
-    .name { fill: #f8fafc; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 600; }
-    .stat { fill: #f8fafc; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 600; }
-    .body { fill: #94a3b8; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
-    .limit { fill: #d6c4a1; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
-    .rail { fill: none; stroke: #1e293b; stroke-width: 2; }
-    .run { fill: none; stroke: #5ce1e6; stroke-width: 2; stroke-linecap: round; }
-    .rule { stroke: #1e293b; stroke-width: 1; }
-    .bead { fill: #f8feff; }
-    @keyframes go {
-      0% { stroke-dashoffset: 1040; }
-      100% { stroke-dashoffset: 0; }
+    .idx { fill: #9fd8dc; font-family: "Segoe UI Mono", ui-monospace, Consolas, monospace; font-size: 12px; letter-spacing: 1px; }
+    .title { fill: #f4f1ea; font-family: Georgia, Palatino, "Times New Roman", serif; font-size: 20px; }
+    .stat { fill: #f4f1ea; font-family: Georgia, Palatino, "Times New Roman", serif; font-size: 20px; }
+    .body { fill: #93a0b0; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; }
+    .limit { fill: #d2c0a0; font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; }
+    .tiny { fill: #93a0b0; font-family: "Segoe UI Mono", ui-monospace, Consolas, monospace; font-size: 10px; }
+    .flag { fill: none; stroke: #9fd8dc; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+    .glint { fill: none; stroke: #d8f7f6; stroke-width: 1.6; stroke-linecap: round; stroke-dasharray: 22 180; animation: glide 5.2s linear infinite; }
+    .bead { fill: #d8f7f6; }
+    .trace { fill: none; stroke: #9fd8dc; stroke-width: 1.25; stroke-dasharray: 14 86; animation: march 9s linear infinite; }
+    .pip { animation: ripple 3.6s ease-in-out infinite; }
+    .pip.last { animation: none; }
+    .cell { animation: ripple 4.4s ease-in-out infinite; }
+    .cell.dim { animation: none; opacity: 0.95; }
+    @keyframes glide { to { stroke-dashoffset: -202; } }
+    @keyframes march { to { stroke-dashoffset: -100; } }
+    @keyframes ripple {
+      0%, 100% { opacity: 0.82; }
+      50% { opacity: 1; }
     }
-    .run { stroke-dasharray: 64 980; animation: go 4.6s linear infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .glint, .trace, .pip, .cell { animation: none; opacity: 1; }
+    }
   </style>
-  <rect width="1120" height="280" rx="16" fill="#070b14"/>
-  <rect width="1120" height="280" rx="16" fill="url(#grid)"/>
-  <path id="rail" class="rail" d="M40 40 H1080"/>
-  <path class="run" d="M40 40 H1080"/>
-  <path class="rule" d="M28 40 V252 M296 40 V252 M564 40 V252 M832 40 V252 M1092 40 V252"/>
-  <circle class="bead" r="3.4">
-    <animateMotion dur="4.6s" repeatCount="indefinite">
-      <mpath href="#rail"/>
-    </animateMotion>
-  </circle>
-    <text class="idx" x="48" y="86">01</text>
-    <text class="name" x="82" y="86">Alloy</text>
-    <text class="stat" x="48" y="128">0.0659% → 0.0175%</text>
-    <text class="body" x="48" y="160">residual drift</text>
-    <text class="body" x="48" y="182">Peak 1.79% → 3.40%</text>
-    <text class="body" x="48" y="204">+620.9 kgCO2e</text>
-    <text class="limit" x="48" y="236">1D, isothermal</text>
-    <text class="idx" x="316" y="86">02</text>
-    <text class="name" x="350" y="86">Surface</text>
-    <text class="stat" x="316" y="128">−31.10% ribs</text>
-    <text class="body" x="316" y="160">+25.74% thickness</text>
-    <text class="body" x="316" y="182">+15.03% with a dent</text>
-    <text class="body" x="316" y="204">equal volume</text>
-    <text class="limit" x="316" y="236">elastic only</text>
-    <text class="idx" x="584" y="86">03</text>
-    <text class="name" x="618" y="86">Frame</text>
-    <text class="stat" x="584" y="128">−5.7% median</text>
-    <text class="body" x="584" y="160">whole-building A1-A3</text>
-    <text class="body" x="584" y="182">32 of 33 frames</text>
-    <text class="body" x="584" y="204">5,184 designs</text>
-    <text class="limit" x="584" y="236">frame dilutes the floor</text>
-    <text class="idx" x="852" y="86">04</text>
-    <text class="name" x="886" y="86">Form</text>
-    <text class="stat" x="852" y="128">79 / 84 within 5%</text>
-    <text class="body" x="852" y="160">seismic pairs</text>
-    <text class="body" x="852" y="182">ShellForm, ShellLab</text>
-    <text class="body" x="852" y="204">equilibrium to 1e-13 m</text>
-    <text class="limit" x="852" y="236">buckling governs</text>
-  <rect x="0.5" y="0.5" width="1119" height="279" rx="16" fill="none" stroke="#1e293b"/>
+  <rect width="1200" height="392" rx="18" fill="#07090f"/>
+  <g transform="translate(16 16)">
+      <rect width="280" height="360" rx="16" fill="#0c121b" stroke="#243246"/>
+      <rect class="trace" width="280" height="360" rx="16" pathLength="100" style="animation-delay:0.0s"/>
+      <text class="idx" x="20" y="36">01</text>
+      <text class="title" x="52" y="36">Alloy</text>
+      <path d="M20 52 H260" stroke="#243246"/>
+      <path id="cardflag" class="flag" d="M 24.0 124.2 L 87.8 129.9 L 115.2 76.6 L 247.4 68.0 L 247.4 92.5 L 165.4 101.1 L 138.0 137.1 Z"/>
+      <path d="M 24.0 124.2 L 87.8 129.9 L 115.2 76.6 L 247.4 68.0 L 247.4 92.5 L 165.4 101.1 L 138.0 137.1 Z" class="glint"/>
+      <circle class="bead" r="3" cx="24.0" cy="124.2">
+        <animateMotion dur="6.5s" repeatCount="indefinite">
+          <mpath href="#cardflag" xlink:href="#cardflag"/>
+        </animateMotion>
+      </circle>
+      <text class="stat" x="20" y="198">0.0659% to 0.0175%</text>
+      <text class="body" x="20" y="226">residual drift</text>
+      <text class="body" x="20" y="248">Peak 1.79% to 3.40%</text>
+      <text class="body" x="20" y="270">+620.9 kgCO2e</text>
+      <text class="limit" x="20" y="292">1D, isothermal</text>
+    </g><g transform="translate(310 16)">
+      <rect width="280" height="360" rx="16" fill="#0c121b" stroke="#243246"/>
+      <rect class="trace" width="280" height="360" rx="16" pathLength="100" style="animation-delay:0.6s"/>
+      <text class="idx" x="20" y="36">02</text>
+      <text class="title" x="52" y="36">Surface</text>
+      <path d="M20 52 H260" stroke="#243246"/>
+      <path d="M24 100 H256" stroke="#243246" stroke-width="1"/>
+      <rect x="34" y="100.0" width="32" height="41.1" rx="2" fill="#d2c0a0"/>
+      <text class="tiny" x="50" y="156" text-anchor="middle">−31.10</text>
+      <text class="tiny" x="50" y="170" text-anchor="middle">ribs</text>
+      <rect x="94" y="78.8" width="32" height="21.2" rx="2" fill="#9fd8dc"/>
+      <text class="tiny" x="110" y="156" text-anchor="middle">+16.05</text>
+      <text class="tiny" x="110" y="170" text-anchor="middle">grid</text>
+      <rect x="154" y="66.0" width="32" height="34.0" rx="2" fill="#9fd8dc"/>
+      <text class="tiny" x="170" y="156" text-anchor="middle">+25.74</text>
+      <text class="tiny" x="170" y="170" text-anchor="middle">thick</text>
+      <rect x="214" y="80.1" width="32" height="19.9" rx="2" fill="#7f93a3"/>
+      <text class="tiny" x="230" y="156" text-anchor="middle">+15.03</text>
+      <text class="tiny" x="230" y="170" text-anchor="middle">dent</text>
+      <text class="stat" x="20" y="198">−31.10% ribs</text>
+      <text class="body" x="20" y="226">+16.05% grid</text>
+      <text class="body" x="20" y="248">+25.74% thickness</text>
+      <text class="body" x="20" y="270">+15.03% with a dent</text>
+      <text class="limit" x="20" y="292">elastic only</text>
+    </g><g transform="translate(604 16)">
+      <rect width="280" height="360" rx="16" fill="#0c121b" stroke="#243246"/>
+      <rect class="trace" width="280" height="360" rx="16" pathLength="100" style="animation-delay:1.2s"/>
+      <text class="idx" x="20" y="36">03</text>
+      <text class="title" x="52" y="36">Frame</text>
+      <path d="M20 52 H260" stroke="#243246"/>
+      <rect class="pip" style="animation-delay:0.00s" x="22" y="86" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.05s" x="44" y="86" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.10s" x="66" y="86" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.15s" x="88" y="86" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.20s" x="110" y="86" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.25s" x="132" y="86" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.30s" x="154" y="86" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.35s" x="176" y="86" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.40s" x="198" y="86" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.45s" x="220" y="86" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.50s" x="242" y="86" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.55s" x="22" y="110" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.60s" x="44" y="110" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.65s" x="66" y="110" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.70s" x="88" y="110" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.75s" x="110" y="110" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.80s" x="132" y="110" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.85s" x="154" y="110" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.90s" x="176" y="110" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:0.95s" x="198" y="110" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:1.00s" x="220" y="110" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:1.05s" x="242" y="110" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:1.10s" x="22" y="134" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:1.15s" x="44" y="134" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:1.20s" x="66" y="134" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:1.25s" x="88" y="134" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:1.30s" x="110" y="134" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:1.35s" x="132" y="134" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:1.40s" x="154" y="134" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:1.45s" x="176" y="134" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:1.50s" x="198" y="134" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip" style="animation-delay:1.55s" x="220" y="134" width="14" height="14" rx="2" fill="#9fd8dc"/>
+      <rect class="pip last" x="246" y="134" width="14" height="14" rx="2" fill="#d2c0a0"/>
+      <text class="stat" x="20" y="198">−5.7% median</text>
+      <text class="body" x="20" y="226">whole-building A1-A3</text>
+      <text class="body" x="20" y="248">32 of 33 frames</text>
+      <text class="body" x="20" y="270">5,184 designs</text>
+      <text class="limit" x="20" y="292">frame dilutes the floor</text>
+    </g><g transform="translate(898 16)">
+      <rect width="280" height="360" rx="16" fill="#0c121b" stroke="#243246"/>
+      <rect class="trace" width="280" height="360" rx="16" pathLength="100" style="animation-delay:1.8s"/>
+      <text class="idx" x="20" y="36">04</text>
+      <text class="title" x="52" y="36">Form</text>
+      <path d="M20 52 H260" stroke="#243246"/>
+      <rect class="cell" style="animation-delay:0.00s" x="18" y="68" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.03s" x="39" y="68" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.06s" x="60" y="68" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.09s" x="81" y="68" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.12s" x="102" y="68" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.15s" x="123" y="68" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.18s" x="144" y="68" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.21s" x="165" y="68" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.24s" x="186" y="68" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.27s" x="207" y="68" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.30s" x="228" y="68" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.33s" x="249" y="68" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.36s" x="18" y="84" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.39s" x="39" y="84" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.42s" x="60" y="84" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.45s" x="81" y="84" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.48s" x="102" y="84" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.51s" x="123" y="84" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.54s" x="144" y="84" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.57s" x="165" y="84" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.60s" x="186" y="84" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.63s" x="207" y="84" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.66s" x="228" y="84" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.69s" x="249" y="84" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.72s" x="18" y="100" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.75s" x="39" y="100" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.78s" x="60" y="100" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.81s" x="81" y="100" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.84s" x="102" y="100" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.87s" x="123" y="100" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.90s" x="144" y="100" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.93s" x="165" y="100" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.96s" x="186" y="100" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:0.99s" x="207" y="100" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.02s" x="228" y="100" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.05s" x="249" y="100" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.08s" x="18" y="116" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.11s" x="39" y="116" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.14s" x="60" y="116" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.17s" x="81" y="116" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.20s" x="102" y="116" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.23s" x="123" y="116" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.26s" x="144" y="116" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.29s" x="165" y="116" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.32s" x="186" y="116" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.35s" x="207" y="116" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.38s" x="228" y="116" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.41s" x="249" y="116" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.44s" x="18" y="132" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.47s" x="39" y="132" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.50s" x="60" y="132" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.53s" x="81" y="132" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.56s" x="102" y="132" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.59s" x="123" y="132" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.62s" x="144" y="132" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.65s" x="165" y="132" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.68s" x="186" y="132" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.71s" x="207" y="132" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.74s" x="228" y="132" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.77s" x="249" y="132" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.80s" x="18" y="148" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.83s" x="39" y="148" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.86s" x="60" y="148" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.89s" x="81" y="148" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.92s" x="102" y="148" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.95s" x="123" y="148" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:1.98s" x="144" y="148" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:2.01s" x="165" y="148" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:2.04s" x="186" y="148" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:2.07s" x="207" y="148" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:2.10s" x="228" y="148" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:2.13s" x="249" y="148" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:2.16s" x="18" y="164" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:2.19s" x="39" y="164" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:2.22s" x="60" y="164" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:2.25s" x="81" y="164" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:2.28s" x="102" y="164" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:2.31s" x="123" y="164" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell" style="animation-delay:2.34s" x="144" y="164" width="15" height="11" rx="1.5" fill="#9fd8dc"/>
+      <rect class="cell dim" x="165" y="164" width="15" height="11" rx="1.5" fill="#d2c0a0"/>
+      <rect class="cell dim" x="186" y="164" width="15" height="11" rx="1.5" fill="#d2c0a0"/>
+      <rect class="cell dim" x="207" y="164" width="15" height="11" rx="1.5" fill="#d2c0a0"/>
+      <rect class="cell dim" x="228" y="164" width="15" height="11" rx="1.5" fill="#d2c0a0"/>
+      <rect class="cell dim" x="249" y="164" width="15" height="11" rx="1.5" fill="#d2c0a0"/>
+      <text class="stat" x="20" y="198">79 / 84 within 5%</text>
+      <text class="body" x="20" y="226">seismic pairs</text>
+      <text class="body" x="20" y="248">ShellForm, ShellLab</text>
+      <text class="body" x="20" y="270">equilibrium to 1e-13 m</text>
+      <text class="limit" x="20" y="292">buckling governs</text>
+    </g>
+  <rect x="0.5" y="0.5" width="1199" height="391" rx="18" fill="none" stroke="#243246"/>
 </svg>
